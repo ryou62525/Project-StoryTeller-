@@ -13,16 +13,14 @@
 
 class Title : public cocos2d::Layer
 {
-protected:
     
-    Title();
-    virtual ~Title();
-    
-    bool init() override;
     
 public:
     
     static cocos2d::Scene* CreateScene();
+    
+    virtual bool init() override;
+    
     CREATE_FUNC(Title)
     
 };

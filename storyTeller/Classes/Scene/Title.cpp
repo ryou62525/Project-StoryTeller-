@@ -10,28 +10,27 @@
 
 USING_NS_CC;
 
-Title::Title()
-{
-    
-}
-
-Title::~Title()
-{
-    
-}
 
 Scene* Title::CreateScene()
 {
-    auto scene = Scene::create();
-    auto layer = Title::create();
+    Scene* scene { Scene::create() };
+    Layer* layer { Title::create() };
     scene->addChild(layer);
     return scene;
 }
 
 bool Title::init()
 {
-    if(!Layer::init()){return false;}
+    if(!Layer::init()){ return false; }
     
+    Size visibleSize { Director::getInstance()->getVisibleSize() };
+    
+    //背景
+    Sprite* bgSprite { Sprite::create("Title.png") };
+    
+    bgSprite->setPosition(visibleSize / 2);
+    
+    this->addChild(bgSprite);
     
     return true;
 }

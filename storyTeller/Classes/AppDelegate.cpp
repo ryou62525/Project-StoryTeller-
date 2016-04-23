@@ -3,17 +3,13 @@
 
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(1024, 767);
-static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
-static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
-static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
-
 AppDelegate::AppDelegate() {
 
 }
 
 AppDelegate::~AppDelegate()
 {
+    
 }
 
 //if you want a different context,just modify the value of glContextAttrs
@@ -40,46 +36,29 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
 	auto glview = director->getOpenGLView();
 	if (!glview) {
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-		glview = GLViewImpl::createWithRect("testTemplate", Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
-#else
-		glview = GLViewImpl::create("testTemplate");
-#endif
+
+        glview = GLViewImpl::create("testTemplate");
 		director->setOpenGLView(glview);
 	}
-
+    
+    director->getOpenGLView()->setDesignResolutionSize(840, 640,
+                                                       ResolutionPolicy::SHOW_ALL);
 
 	// turn on display FPS
 	director->setDisplayStats(true);
 
 	// set FPS. the default value is 1.0/60 if you don't call this
 	director->setAnimationInterval(1.0 / 60);
-
-	glview->setDesignResolutionSize(1024, 768,ResolutionPolicy::SHOW_ALL);
-
-	// Set the design resolution
-	glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);
-	Size frameSize = glview->getFrameSize();
-	// if the frame's height is larger than the height of medium size.
-	if (frameSize.height > mediumResolutionSize.height)
-	{
-		director->setContentScaleFactor(MIN(largeResolutionSize.height / designResolutionSize.height, largeResolutionSize.width / designResolutionSize.width));
-	}
-	// if the frame's height is larger than the height of small size.
-	else if (frameSize.height > smallResolutionSize.height)
-	{
-		director->setContentScaleFactor(MIN(mediumResolutionSize.height / designResolutionSize.height, mediumResolutionSize.width / designResolutionSize.width));
-	}
-	// if the frame's height is smaller than the height of medium size.
-	else
-	{
-		director->setContentScaleFactor(MIN(smallResolutionSize.height / designResolutionSize.height, smallResolutionSize.width / designResolutionSize.width));
-	}
-
-	register_all_packages();
+    
+    //Resource配下のフォルダをSearchPathに追加して読み込み時フォルダ名を省略する
+    FileUtils::getInstance()->addSearchPath("CharacterObject");
+	FileUtils::getInstance()->addSearchPath("Map");
+    FileUtils::getInstance()->addSearchPath("Scene");
+    FileUtils::getInstance()->addSearchPath("SS5Player");
+    FileUtils::getInstance()->addSearchPath("SSCommon");
 
 	// create a scene. it's an autorelease object
-    Scene* scene = Title::CreateScene();
+    Scene* scene = { Title::CreateScene() };
 
 	// run
 	director->runWithScene(scene);
