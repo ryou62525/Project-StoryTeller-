@@ -2,35 +2,36 @@
 //  Title.cpp
 //  storyTeller
 //
-//  Created by vantan on 2016/04/14.
+//  Created by vantan on 2016/04/23.
 //
 //
 
-#include <Title.h>
+#include "Title.hpp"
 
 USING_NS_CC;
 
-
 Scene* Title::CreateScene()
 {
-    Scene* scene { Scene::create() };
-    Layer* layer { Title::create() };
+    Scene* scene = Scene::create();
+    Layer* layer = Title::create();
+    
     scene->addChild(layer);
-    return scene;
+    return  scene;
 }
 
 bool Title::init()
 {
     if(!Layer::init()){ return false; }
     
-    Size visibleSize { Director::getInstance()->getVisibleSize() };
+    Size visibleSize = Director::getInstance()->getVisibleSize();
     
-    //背景
-    Sprite* bgSprite { Sprite::create("Title.png") };
+    Sprite* bgSprite = Sprite::create("ImageFile/TITLE.png");
     
+    bgSprite->setScale(0.7, 0.7);
     bgSprite->setPosition(visibleSize / 2);
     
     this->addChild(bgSprite);
     
     return true;
+    
 }
