@@ -23,12 +23,14 @@ bool Title::init()
 {
     if(!Layer::init()){ return false; }
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
+    Director* director = Director::getInstance();
+    
+    Size size = director->getWinSize();
     
     Sprite* bgSprite = Sprite::create("ImageFile/TITLE.png");
     
-    bgSprite->setScale(0.7, 0.7);
-    bgSprite->setPosition(visibleSize / 2);
+    //bgSprite->setScale(0.7, 0.7);
+    bgSprite->setPosition(Vec2(size.width / 2, size.height / 2));
     
     this->addChild(bgSprite);
     
