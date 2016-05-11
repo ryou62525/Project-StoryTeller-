@@ -1,0 +1,6 @@
+1
+ImageFile/Menubg.png
+960
+600
+1.0
+1.0

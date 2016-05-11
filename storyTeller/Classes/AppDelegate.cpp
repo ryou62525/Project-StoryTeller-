@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "Scene/Title.hpp"
+#include "Scene/Home.hpp"
 
 USING_NS_CC;
 
@@ -57,7 +58,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
 
     // create a scene. it's an autorelease object
-    auto scene = Title::CreateScene();
+    auto scene = Home::CreateScene();
 
     // run
     director->runWithScene(scene);
