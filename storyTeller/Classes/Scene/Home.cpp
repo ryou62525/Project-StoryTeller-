@@ -23,8 +23,8 @@ bool Home::init()
 {
     if(!Layer::init()){ return false; }
     
-//    Director* director = Director::getInstance();
-//    Size size = director->getWinSize();
+    Director* director = Director::getInstance();
+    Size size = director->getWinSize();
     SetBgImage();
     SetUiImage();
     
