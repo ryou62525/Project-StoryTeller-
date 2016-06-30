@@ -11,4 +11,17 @@
 
 #include <stdio.h>
 
+class SceneManager : public cocos2d::Layer
+{
+    static int transisionNo;
+    
+public:
+    
+    static cocos2d::Scene* CreateScene();
+   
+    virtual bool init();
+    
+    CREATE_FUNC(SceneManager)
+};
+
 #endif /* SceneManager_hpp */

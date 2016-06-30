@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "Scene/Title.hpp"
 #include "Scene/Home.hpp"
+#include "SceneManager.hpp"
 
 USING_NS_CC;
 
@@ -53,13 +54,12 @@ bool AppDelegate::applicationDidFinishLaunching()
     director->setAnimationInterval(1.0 / 60);
     
     glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
-
+    
     // create a scene. it's an autorelease object
-    auto scene = Home::CreateScene();
-
-    // run
+    Scene* scene = SceneManager::CreateScene();
+   
     director->runWithScene(scene);
-
+    
     return true;
 }
 
