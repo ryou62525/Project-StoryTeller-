@@ -2,6 +2,7 @@
 #include "Scene/Title.hpp"
 #include "Scene/Home.hpp"
 #include "SceneManager.hpp"
+#include "Game.hpp"
 
 USING_NS_CC;
 
@@ -29,7 +30,6 @@ AppDelegate::~AppDelegate()
 void AppDelegate::initGLContextAttrs()
 {
     GLContextAttrs glContextAttrs = {8, 8, 8, 8, 24, 8};
-
     GLView::setGLContextAttrs(glContextAttrs);
 }
 
@@ -52,11 +52,10 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
-    
     glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
     
     // create a scene. it's an autorelease object
-    Scene* scene = SceneManager::CreateScene();
+    Scene* scene = Game::CreateScene();
    
     director->runWithScene(scene);
     
