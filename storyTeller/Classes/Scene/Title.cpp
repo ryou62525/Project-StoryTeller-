@@ -7,6 +7,7 @@
 //
 
 #include "Title.hpp"
+#include "Home.hpp"
 
 USING_NS_CC;
 
@@ -24,7 +25,7 @@ bool Title::init()
     if(!Layer::init()){ return false; }
     
     SetImageInfo();
-    
+        
     return true;
 }
 
