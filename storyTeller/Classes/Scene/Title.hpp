@@ -19,10 +19,10 @@ class Title : public cocos2d::Layer
     
 public:
     
+    int sceneNumber = 0;
     static cocos2d::Scene* CreateScene();
     virtual bool init();
     void SetImageInfo();
-    
     CREATE_FUNC(Title)
     
 };
