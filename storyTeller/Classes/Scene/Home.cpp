@@ -28,24 +28,6 @@ bool Home::init()
     
     SetBgImage();
     SetUiImage();
-   
-    
-    //イベントリスナーの生成
-    auto listener = EventListenerTouchOneByOne::create();
-    listener->setSwallowTouches(true);
-    listener->onTouchBegan = [&](Touch* touch, Event* event)
-    {
-        Scene* scene = Home::CreateScene();
-        Scene* transition = TransitionFade::create(1.0f, scene);
-        
-        // run
-        director->getInstance()->replaceScene(transition);
-
-        return true;
-    };
-    
-    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
-
     
     return true;
 }
