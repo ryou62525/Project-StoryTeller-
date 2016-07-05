@@ -25,12 +25,13 @@ bool Game::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     
-    auto obj = Sprite3D::create("FbxFile/jimen_a.c3b");
-    obj->setPosition(Vec2(visibleSize.width/2,visibleSize.height/4));
-    obj->setRotation3D(Vec3(0,0,0));
+    auto obj = Sprite3D::create("FbxFile/Floor.c3b");
+    obj->setTexture("FbxFile/grass.png");
+    obj->setPosition3D(Vec3(visibleSize.width/2,visibleSize.height/4,0));
+    obj->setScale(1000, 1000);
+    obj->setRotation3D(Vec3(90,0,0));
     
     addChild(obj);
-    
     
     return true;
 }

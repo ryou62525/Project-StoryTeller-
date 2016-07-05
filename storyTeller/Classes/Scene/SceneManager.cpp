@@ -6,9 +6,9 @@
 //
 //
 
-#include "SceneManager.hpp"
-#include "Home.hpp"
 #include "Title.hpp"
+#include "SceneManager.hpp"
+#include "HomeMenu.hpp"
 
 USING_NS_CC;
 
@@ -53,8 +53,8 @@ bool SceneManager::init()
             this->transisionNo = 0;
         }
         
-        auto nextScene = Title::CreateScene(),
-        secondScene = Home::CreateScene();
+        auto nextScene = Title::CreateScene();
+        auto secondScene = HomeMenu::CreateScene();
         
         Scene* transision;
         

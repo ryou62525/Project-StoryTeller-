@@ -9,7 +9,7 @@
 #ifndef SceneManager_hpp
 #define SceneManager_hpp
 
-#include <stdio.h>
+#include <cocos2d.h>
 
 class SceneManager : public cocos2d::Layer
 {

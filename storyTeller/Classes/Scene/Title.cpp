@@ -7,7 +7,6 @@
 //
 
 #include "Title.hpp"
-#include "Home.hpp"
 
 USING_NS_CC;
 
@@ -32,6 +31,7 @@ bool Title::init()
 //画像の情報をテキストファイルから呼び出す
 void Title::SetImageInfo()
 {
+    
     auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/TitleImagePath.txt");
     std::ifstream inFile(filePath);
     assert(inFile);

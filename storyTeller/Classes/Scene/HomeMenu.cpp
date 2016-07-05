@@ -1,25 +1,24 @@
 //
-//  Home.cpp
+//  HomeMenu.cpp
 //  storyTeller
 //
-//  Created by vantan on 2016/05/02.
+//  Created by vantan on 2016/07/05.
 //
 //
-
-#include "Home.hpp"
+#include "HomeMenu.hpp"
 
 USING_NS_CC;
 
-Scene* Home::CreateScene()
+Scene* HomeMenu::CreateScene()
 {
     Scene* scene = Scene::create();
-    Layer* layer = Home::create();
+    Layer* layer = Menu::create();
     
     scene->addChild(layer);
     return  scene;
 }
 
-bool Home::init()
+bool HomeMenu::init()
 {
     if(!Layer::init()){ return false; }
     
@@ -32,7 +31,7 @@ bool Home::init()
     return true;
 }
 
-void Home::SetBgImage()
+void HomeMenu::SetBgImage()
 {
     auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeImagePath.txt");
     std::ifstream inFile(filePath);
@@ -55,7 +54,7 @@ void Home::SetBgImage()
     }
 }
 
-void Home::SetUiImage()
+void HomeMenu::SetUiImage()
 {
     auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeUIImage.txt");
     std::ifstream inFile(filePath);
@@ -76,15 +75,15 @@ void Home::SetUiImage()
         button[i]->setPosition(Vec2(pos.x, pos.y));
         button[i]->setScale(size.x, size.y);
         this->addChild(button[i]);
-        button[i]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
+        button[i]->addTouchEventListener(CC_CALLBACK_2(HomeMenu::touchEvent, this));
     }
-
+    
 }
 
-void Home::touchEvent(Ref *pSender, ui::Widget::TouchEventType type)
+void HomeMenu::touchEvent(Ref *pSender, ui::Widget::TouchEventType type)
 {
     
-    Scene* nextScene = Home::CreateScene();
+    Scene* nextScene = HomeMenu::CreateScene();
     
     Scene* transition;
     

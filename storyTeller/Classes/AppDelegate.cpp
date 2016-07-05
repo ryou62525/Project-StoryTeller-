@@ -1,6 +1,6 @@
 #include "AppDelegate.h"
 #include "Scene/Title.hpp"
-#include "Scene/Home.hpp"
+#include "Scene/HomeMenu.hpp"
 #include "SceneManager.hpp"
 #include "Game.hpp"
 

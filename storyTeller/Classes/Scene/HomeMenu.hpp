@@ -1,18 +1,19 @@
 //
-//  Home.hpp
+//  HomeMenu.hpp
 //  storyTeller
 //
-//  Created by vantan on 2016/05/02.
+//  Created by vantan on 2016/07/05.
 //
 //
 
-#ifndef Home_hpp
-#define Home_hpp
+
+#ifndef HomeMenu_hpp
+#define HomeMenu_hpp
 
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
 
-class Home : public cocos2d::Layer
+class HomeMenu : public cocos2d::Layer
 {
 public:
     
@@ -22,7 +23,7 @@ public:
     void SetUiImage();
     virtual bool init();
     
-    CREATE_FUNC(Home)
+    CREATE_FUNC(HomeMenu)
 };
 
-#endif /* Home_hpp */
+#endif /* HomeMenu_hpp */
