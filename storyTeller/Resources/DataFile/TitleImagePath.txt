@@ -1,0 +1,11 @@
+2
+ImageFile/Title.png
+960
+600
+1.0
+1.0
+ImageFile/TapEventImage.png
+960
+200
+0.4
+0.4
