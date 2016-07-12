@@ -34,49 +34,29 @@ bool SceneManager::init()
     
     this->addChild(bgSprite);
     
-    if(transisionNo %2 == 1)
-    {
-        bgSprite->setColor(Color3B::BLUE);
-    }
-    
     //イベントリスナーの生成
     auto listener = EventListenerTouchOneByOne::create();
     listener->setSwallowTouches(true);
+    
     listener->onTouchBegan = [&](Touch* touch, Event* event)
     {
-        
-        int no = this->transisionNo;
-        this->transisionNo++;
-        
-        if(this->transisionNo > 1)
-        {
-            this->transisionNo = 0;
-        }
-        
         auto nextScene = Title::CreateScene();
-        auto secondScene = HomeMenu::CreateScene();
-        
         Scene* transision;
         
-        switch (no) {
-            case 0:
-                transision=TransitionFade::create(1.0f, nextScene);
-                break;
-            case 1:
-                transision=TransitionFade::create(1.0f, secondScene);
-                break;
-                
-            default:
-                break;
-        }
+        transision = TransitionFade::create(1.0f, nextScene);
         Director::getInstance()->replaceScene(transision);
-
-        
-        
         return true;
     };
     
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     return true;
+}
+
+void SceneManager::hogehoge()
+{
+    auto nextScene = Title::CreateScene();
+    Scene* transision;
+    transision = TransitionFade::create(1.0f, nextScene);
+    Director::getInstance()->replaceScene(transision);
 }

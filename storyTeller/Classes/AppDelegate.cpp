@@ -55,7 +55,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
     
     // create a scene. it's an autorelease object
-    Scene* scene = Game::CreateScene();
+    Scene* scene = SceneManager::CreateScene();
    
     director->runWithScene(scene);
     

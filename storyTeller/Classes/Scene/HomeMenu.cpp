@@ -8,11 +8,10 @@
 #include "HomeMenu.hpp"
 
 USING_NS_CC;
-
 Scene* HomeMenu::CreateScene()
 {
     Scene* scene = Scene::create();
-    Layer* layer = Menu::create();
+    Layer* layer = HomeMenu::create();
     
     scene->addChild(layer);
     return  scene;
