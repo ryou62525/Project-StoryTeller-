@@ -9,16 +9,17 @@
 #ifndef SceneManager_hpp
 #define SceneManager_hpp
 
-#include <stdio.h>
+#include <cocos2d.h>
 
 class SceneManager : public cocos2d::Layer
 {
     static int transisionNo;
     
+    int timer = 0;
 public:
     
     static cocos2d::Scene* CreateScene();
-   
+    void hogehoge();
     virtual bool init();
     
     CREATE_FUNC(SceneManager)

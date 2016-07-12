@@ -7,7 +7,7 @@
 //
 
 #include "Title.hpp"
-#include "Home.hpp"
+#include "HomeMenu.hpp"
 
 USING_NS_CC;
 
@@ -25,6 +25,22 @@ bool Title::init()
     if(!Layer::init()){ return false; }
     
     SetImageInfo();
+    
+    //イベントリスナーの生成
+    auto listener = EventListenerTouchOneByOne::create();
+    listener->setSwallowTouches(true);
+    
+    listener->onTouchBegan = [&](Touch* touch, Event* event)
+    {
+        auto nextScene = HomeMenu::CreateScene();
+        Scene* transision;
+        
+        transision=TransitionFade::create(1.0f, nextScene);
+        Director::getInstance()->replaceScene(transision);
+        return true;
+    };
+    
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
         
     return true;
 }
@@ -32,6 +48,7 @@ bool Title::init()
 //画像の情報をテキストファイルから呼び出す
 void Title::SetImageInfo()
 {
+    
     auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/TitleImagePath.txt");
     std::ifstream inFile(filePath);
     assert(inFile);

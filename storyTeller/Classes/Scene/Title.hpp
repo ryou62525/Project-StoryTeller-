@@ -21,10 +21,10 @@ public:
     
     int sceneNumber = 0;
     static cocos2d::Scene* CreateScene();
-    virtual bool init();
+    bool init();
     void SetImageInfo();
     CREATE_FUNC(Title)
     
 };
 
-#endif /* Title_hpp */
+#endif /* Title_hpp */.
