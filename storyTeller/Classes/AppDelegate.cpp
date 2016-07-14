@@ -1,8 +1,9 @@
 #include "AppDelegate.h"
 #include "Scene/Title.hpp"
+#include "Scene/SceneManager.hpp"
+#include "Scene/Game.hpp"
 #include "Scene/HomeMenu.hpp"
-#include "SceneManager.hpp"
-#include "Game.hpp"
+
 
 USING_NS_CC;
 
@@ -55,7 +56,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
     
     // create a scene. it's an autorelease object
-    Scene* scene = SceneManager::CreateScene();
+    Scene* scene = Game::CreateScene();
    
     director->runWithScene(scene);
     
