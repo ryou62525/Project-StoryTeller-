@@ -23,8 +23,11 @@ bool Home::init()
     
     if(!Layer::init()){return  false;}
     
-    
-    SetBgImage();
+    //960 550
+    sprite2 = Sprite::create("ImageFile/Menubg.png");
+    sprite2->setPosition(960, 550);
+    this->addChild(sprite2);
+    //SetBgImage();
     SetUiImage();
     
     return true;
