@@ -2,7 +2,7 @@
 //  Game.hpp
 //  storyTeller
 //
-//  Created by vantan on 2016/06/29.
+//  Created by vantan on 2016/07/19.
 //
 //
 
@@ -10,15 +10,15 @@
 #define Game_hpp
 
 #include <cocos2d.h>
+USING_NS_CC;
 
 class Game : public cocos2d::Layer
 {
-  
 public:
     
-    static cocos2d::Scene* CreateScene();
-    virtual bool init();
-    
+    static Scene* CreateScene();
+    bool init();
+    void update(float deltaTime);
     CREATE_FUNC(Game)
 };
 

@@ -2,7 +2,7 @@
 //  Title.hpp
 //  storyTeller
 //
-//  Created by vantan on 2016/04/23.
+//  Created by vantan on 2016/07/19.
 //
 //
 
@@ -10,21 +10,17 @@
 #define Title_hpp
 
 #include <cocos2d.h>
+USING_NS_CC;
 
 class Title : public cocos2d::Layer
 {
-    std::string imagePath = "DataFile/TitleImagePath.txt";
-    int imageValue;
-    cocos2d::Sprite* bgSprite;
-    
 public:
     
-    int sceneNumber = 0;
-    static cocos2d::Scene* CreateScene();
-    bool init();
+    static Scene* CreateScene();
+    virtual bool init();
     void SetImageInfo();
+    void update(float deltaTime);
     CREATE_FUNC(Title)
-    
 };
 
-#endif /* Title_hpp */.
+#endif /* Title_hpp */
