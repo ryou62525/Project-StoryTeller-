@@ -1,5 +1,14 @@
 #include "AppDelegate.h"
+<<<<<<< HEAD
 #include "Scene/MainApp.hpp"
+=======
+#include "Scene/Title.hpp"
+#include "Scene/SceneManager.hpp"
+#include "Scene/Game.hpp"
+#include "Scene/HomeMenu.hpp"
+
+
+>>>>>>> origin/master
 USING_NS_CC;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320),
@@ -42,9 +51,15 @@ bool AppDelegate::applicationDidFinishLaunching()
     director->setAnimationInterval(1.0 / 60);
     glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
     
+<<<<<<< HEAD
     
        // create a scene. it's an autorelease object
     Scene* scene = MainApp::CreateScene();
+=======
+    // create a scene. it's an autorelease object
+    Scene* scene = Game::CreateScene();
+   
+>>>>>>> origin/master
     director->runWithScene(scene);
     
     return true;
