@@ -14,13 +14,9 @@ USING_NS_CC;
 
 class Title : public cocos2d::Layer
 {
-    std::string imagePath = "DataFile/TitleImagePath.txt";
-    int imageValue;
-    cocos2d::Sprite* bgSprite;
-    
 public:
     
-    static cocos2d::Scene* CreateScene();
+    static Scene* CreateScene();
     virtual bool init();
     void SetImageInfo();
     void update(float deltaTime);

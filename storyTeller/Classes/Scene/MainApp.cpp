@@ -2,7 +2,7 @@
 //  MainApp.cpp
 //  storyTeller
 //
-//  Created by vantan on 2016/07/19.
+//  Created by vantan on 2016/07/22.
 //
 //
 
@@ -15,7 +15,7 @@
 Scene* MainApp::CreateScene()
 {
     Scene* scene = Scene::create();
-    Layer* layer = Title::create();
+    Layer* layer = Home::create();
     scene->addChild(layer);
     return scene;
 }
