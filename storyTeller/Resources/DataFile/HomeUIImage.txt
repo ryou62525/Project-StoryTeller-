@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 7
 ImageFile/UIHome.png
 150
+=======
+3
+ImageFile/UIHome.png
+1750
+>>>>>>> master
 120
 0.15
 0.15
 ImageFile/UIQuest.png
+<<<<<<< HEAD
 420
 120
 0.15
@@ -15,16 +22,36 @@ ImageFile/UIItem.png
 0.15
 0.15
 ImageFile/UIShop.png
+=======
+1750
+400
+0.15
+0.15
+ImageFile/UIOption.png
+1750
+680
+0.15
+0.15
+ImageFile/UIUser.png
+>>>>>>> master
 960
 120
 0.15
 0.15
+<<<<<<< HEAD
 ImageFile/UIOption.png
+=======
+ImageFile/UIShop.png
+>>>>>>> master
 1230
 120
 0.15
 0.15
+<<<<<<< HEAD
 ImageFile/UIUser.png
+=======
+ImageFile/UIItem.png
+>>>>>>> master
 1500
 120
 0.15
