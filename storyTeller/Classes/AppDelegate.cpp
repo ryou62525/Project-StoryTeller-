@@ -1,24 +1,14 @@
 #include "AppDelegate.h"
 #include "Scene/Title.hpp"
-#include "Scene/SceneManager.hpp"
+#include "Scene/Home.hpp"
+#include "Scene/MainApp.hpp"
 #include "Scene/Game.hpp"
-#include "Scene/HomeMenu.hpp"
-
-
 USING_NS_CC;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320),
                      smallResolutionSize = cocos2d::Size(480, 320),
                      mediumResolutionSize = cocos2d::Size(1024, 768),
                      largeResolutionSize = cocos2d::Size(2048, 1536);
-
-enum Scenes
-{
-    Title,
-    Menu,
-    Game,
-    Result,
-};
 
 AppDelegate::AppDelegate() {
 
@@ -53,11 +43,15 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
+    
+    glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
+
+    // run
     glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
     
     // create a scene. it's an autorelease object
-    Scene* scene = Game::CreateScene();
-   
+    Scene* scene = MainApp::CreateScene();
+
     director->runWithScene(scene);
     
     return true;
