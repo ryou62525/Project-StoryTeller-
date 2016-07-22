@@ -2,13 +2,33 @@
 //  Home.hpp
 //  storyTeller
 //
+<<<<<<< HEAD
+//  Created by vantan on 2016/05/02.
+=======
 //  Created by vantan on 2016/07/19.
+>>>>>>> master
 //
 //
 
 #ifndef Home_hpp
 #define Home_hpp
 
+<<<<<<< HEAD
+#include "cocos2d.h"
+#include "ui/CocosGUI.h"
+
+class Home : public cocos2d::Layer
+{
+public:
+    
+    static cocos2d::Scene* CreateScene();
+    void touchEvent(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
+    void SetBgImage();
+    void SetUiImage();
+    virtual bool init();
+    
+    CREATE_FUNC(Home)
+=======
 #include <cocos2d.h>
 #include <ui/CocosGUI.h>
 USING_NS_CC;
@@ -42,6 +62,7 @@ public:
     
     CREATE_FUNC(Home)
     
+>>>>>>> master
 };
 
 #endif /* Home_hpp */
