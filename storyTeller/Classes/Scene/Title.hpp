@@ -20,18 +20,12 @@ class Title : public cocos2d::Layer
     
 public:
     
-<<<<<<< HEAD
     static cocos2d::Scene* CreateScene();
     virtual bool init();
     void SetImageInfo();
-    
-=======
-    static Scene* CreateScene();
-    virtual bool init();
-    void SetImageInfo();
     void update(float deltaTime);
->>>>>>> master
     CREATE_FUNC(Title)
+    
 };
 
 #endif /* Title_hpp */
