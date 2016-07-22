@@ -2,7 +2,7 @@
 //  Title.hpp
 //  storyTeller
 //
-//  Created by vantan on 2016/04/23.
+//  Created by vantan on 2016/07/19.
 //
 //
 
@@ -10,6 +10,7 @@
 #define Title_hpp
 
 #include <cocos2d.h>
+USING_NS_CC;
 
 class Title : public cocos2d::Layer
 {
@@ -19,12 +20,18 @@ class Title : public cocos2d::Layer
     
 public:
     
+<<<<<<< HEAD
     static cocos2d::Scene* CreateScene();
     virtual bool init();
     void SetImageInfo();
     
+=======
+    static Scene* CreateScene();
+    virtual bool init();
+    void SetImageInfo();
+    void update(float deltaTime);
+>>>>>>> master
     CREATE_FUNC(Title)
-    
 };
 
 #endif /* Title_hpp */
