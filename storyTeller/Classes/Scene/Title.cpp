@@ -2,12 +2,14 @@
 //  Title.cpp
 //  storyTeller
 //
-//  Created by vantan on 2016/07/19.
+//  Created by vantan on 2016/07/22.
 //
 //
 
 #include "Title.hpp"
 #include "Home.hpp"
+#include "Result.hpp"
+#include <fstream>
 
 Scene* Title::CreateScene()
 {
@@ -22,31 +24,29 @@ bool Title::init()
     if(!Layer::init()){return  false;}
     
     SetImageInfo();
-    this->scheduleUpdate();
+ 
+    //イベントリスナーの生成
+    auto listener = EventListenerTouchOneByOne::create();
+    listener->setSwallowTouches(true);
+    
+    listener->onTouchBegan = [&](Touch* touch, Event* event)
+    {
+        auto nextScene = Home::CreateScene();
+        Scene* transision;
+        
+        transision = TransitionFade::create(1.0f, nextScene);
+        Director::getInstance()->replaceScene(transision);
+        return true;
+    };
+    
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     return true;
 }
 
 void Title::update(float deltaTime)
 {
-    SetImageInfo();
     
-    //イベントリスナーの生成
-        auto listener = EventListenerTouchOneByOne::create();
-        listener->setSwallowTouches(true);
-    
-        listener->onTouchBegan = [&](Touch* touch, Event* event)
-        {
-            auto nextScene = Home::CreateScene();
-            Scene* transision;
-    
-            transision=TransitionFade::create(1.0f, nextScene);
-            Director::getInstance()->replaceScene(transision);
-            return true;
-        };
-    
-        this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
-            
 }
 
 //画像の情報をテキストファイルから呼び出す
@@ -55,14 +55,14 @@ void Title::SetImageInfo()
     auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/TitleImagePath.txt");
     std::ifstream inFile(filePath);
     assert(inFile);
-
+    
     size_t imageValue;
     std::string _filePath;
     Vec2 pos, size;
-
+    
     inFile >> imageValue;
     Sprite* bgSprite[imageValue];
-
+    
     for(int i = 0; i < imageValue; i++)
     {
         //画像のパス、横の座標、縦の座標、
@@ -73,7 +73,9 @@ void Title::SetImageInfo()
         bgSprite[i] = Sprite::create(_filePath);
         bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
         bgSprite[i]->setScale(size.x, size.y);
-
+        
         this->addChild(bgSprite[i]);
     }
+    
+    CCLOG("%f", bgSprite[0]->getPosition().x);
 }

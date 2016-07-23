@@ -32,13 +32,10 @@ public:
     static Scene* CreateScene();
     virtual bool init();
     void update(float deltaTime);
-    void hoge(int a[]);
-    
+
     void touchEvent(Ref *pSender, ui::Widget::TouchEventType type);
     void SetBgImage();
     void SetUiImage();
-    void hoge(int a, int b);
-    
     void SetQuestMenu();
     
     CREATE_FUNC(Home)
