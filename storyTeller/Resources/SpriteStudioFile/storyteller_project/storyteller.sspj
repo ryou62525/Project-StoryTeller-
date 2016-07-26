@@ -116,8 +116,8 @@
 		<value>st_girl.ssae</value>
 		<value>st_monster01.ssae</value>
 	</animepackNames>
-	<lastAnimeFile>st_monster01.ssae</lastAnimeFile>
-	<lastAnimeName>no_anime</lastAnimeName>
-	<lastCellMapFile>stage_sample2.ssce</lastCellMapFile>
+	<lastAnimeFile>st_girl.ssae</lastAnimeFile>
+	<lastAnimeName>st_attack_girl01</lastAnimeName>
+	<lastCellMapFile>st_girl.ssce</lastCellMapFile>
 	<lastPart>root</lastPart>
 </SpriteStudioProject>
