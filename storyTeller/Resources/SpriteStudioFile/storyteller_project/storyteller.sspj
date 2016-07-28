@@ -116,8 +116,9 @@
 		<value>st_girl.ssae</value>
 		<value>st_monster01.ssae</value>
 	</animepackNames>
-	<lastAnimeFile>st_girl.ssae</lastAnimeFile>
-	<lastAnimeName>st_run_girl01</lastAnimeName>
-	<lastCellMapFile>st_girl.ssce</lastCellMapFile>
-	<lastPart>root</lastPart>
+	<lastAnimeFile>st_monster01.ssae</lastAnimeFile>
+	<lastAnimeName>st_attack_specter01</lastAnimeName>
+	<lastCellMapFile>st_monster01.ssce</lastCellMapFile>
+	<lastCell>wing_r</lastCell>
+	<lastPart>wing_r</lastPart>
 </SpriteStudioProject>
