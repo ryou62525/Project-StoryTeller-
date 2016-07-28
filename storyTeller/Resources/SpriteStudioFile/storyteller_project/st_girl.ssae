@@ -285,7 +285,7 @@
 				<alphaBlendType>mix</alphaBlendType>
 				<show>1</show>
 				<locked>0</locked>
-				<expandAttribute>0</expandAttribute>
+				<expandAttribute>1</expandAttribute>
 				<expandChildren>1</expandChildren>
 			</value>
 			<value>
@@ -10558,52 +10558,6 @@
 							</key>
 							<key time="32">
 								<value>0</value>
-							</key>
-						</attribute>
-						<attribute tag="VCOL">
-							<key time="0" ipType="bezier">
-								<curve syncStartEnd="1">1 0 -9.87047386169434 0</curve>
-								<value>
-									<target>whole</target>
-									<blendType>mul</blendType>
-									<color>
-										<rgba>FF808080</rgba>
-										<rate>0</rate>
-									</color>
-								</value>
-							</key>
-							<key time="16" ipType="bezier">
-								<curve syncStartEnd="0">9.88161563873291 0 -1.22980523109436 0.00203045690432191</curve>
-								<value>
-									<target>vertex</target>
-									<blendType>mul</blendType>
-									<LT>
-										<rgba>FF430808</rgba>
-										<rate>1</rate>
-									</LT>
-									<RT>
-										<rgba>FF808080</rgba>
-										<rate>1</rate>
-									</RT>
-									<LB>
-										<rgba>FF808080</rgba>
-										<rate>1</rate>
-									</LB>
-									<RB>
-										<rgba>FF808080</rgba>
-										<rate>1</rate>
-									</RB>
-								</value>
-							</key>
-							<key time="32" ipType="linear">
-								<value>
-									<target>whole</target>
-									<blendType>mul</blendType>
-									<color>
-										<rgba>FF808080</rgba>
-										<rate>0</rate>
-									</color>
-								</value>
 							</key>
 						</attribute>
 					</attributes>
