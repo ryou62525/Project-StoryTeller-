@@ -3,6 +3,8 @@
 #include "Scene/Home.hpp"
 #include "Scene/MainApp.hpp"
 #include "Scene/Game.hpp"
+#include "HelloWorldScene.h"
+
 USING_NS_CC;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320),
@@ -50,7 +52,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
     
     // create a scene. it's an autorelease object
-    Scene* scene = MainApp::CreateScene();
+    Scene* scene = HelloWorld::createScene();
 
     director->runWithScene(scene);
     

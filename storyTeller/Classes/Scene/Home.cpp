@@ -52,6 +52,7 @@ void Home::SetBgImage()
     Vec2 pos, size;
 
     inFile >> imageValue;
+
     Sprite* bgSprite[imageValue];
     for(int i = 0; i < imageValue; i++)
     {
