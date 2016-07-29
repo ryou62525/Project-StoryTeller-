@@ -11,6 +11,8 @@
 #include "Result.hpp"
 #include <fstream>
 
+#include <fstream>
+
 Scene* Title::CreateScene()
 {
     Scene* scene = Scene::create();
