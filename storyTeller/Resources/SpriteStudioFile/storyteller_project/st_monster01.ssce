@@ -41,7 +41,7 @@
 			<name>upperarm_r</name>
 			<pos>24 430</pos>
 			<size>142 240</size>
-			<pivot>0 0</pivot>
+			<pivot>-0.0140845067799091 0.179166659712791</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -50,7 +50,7 @@
 			<name>foot_r</name>
 			<pos>558 885</pos>
 			<size>146 138</size>
-			<pivot>0 0</pivot>
+			<pivot>0.184931501746178 0.00724637694656849</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -59,7 +59,7 @@
 			<name>foot_l</name>
 			<pos>829 862</pos>
 			<size>148 145</size>
-			<pivot>0 0</pivot>
+			<pivot>0.121621623635292 0.0310344826430082</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -68,7 +68,7 @@
 			<name>leg_r</name>
 			<pos>525 744</pos>
 			<size>182 142</size>
-			<pivot>0 0</pivot>
+			<pivot>-0.10989011079073 0.16901408135891</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -77,7 +77,7 @@
 			<name>leg_l</name>
 			<pos>766 742</pos>
 			<size>193 125</size>
-			<pivot>0 0</pivot>
+			<pivot>-0.132124349474907 0.148000001907349</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -86,7 +86,7 @@
 			<name>tight_r</name>
 			<pos>512 494</pos>
 			<size>176 260</size>
-			<pivot>0 0</pivot>
+			<pivot>0.159090906381607 0.0923076942563057</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -95,7 +95,7 @@
 			<name>tight_l</name>
 			<pos>781 510</pos>
 			<size>162 244</size>
-			<pivot>0 0</pivot>
+			<pivot>0.123456791043282 0.266393452882767</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -104,7 +104,7 @@
 			<name>hund_r</name>
 			<pos>497 323</pos>
 			<size>239 176</size>
-			<pivot>0 0</pivot>
+			<pivot>0.282426774501801 0.153409093618393</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -113,7 +113,7 @@
 			<name>hund_l</name>
 			<pos>749 321</pos>
 			<size>244 191</size>
-			<pivot>0 0</pivot>
+			<pivot>0.172131150960922 0.342931926250458</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -122,7 +122,7 @@
 			<name>arm_r</name>
 			<pos>510 33</pos>
 			<size>248 287</size>
-			<pivot>0 0</pivot>
+			<pivot>-0.0887096747756004 0.245644599199295</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -131,16 +131,16 @@
 			<name>arm_l</name>
 			<pos>768 34</pos>
 			<size>226 289</size>
-			<pivot>0 0</pivot>
+			<pivot>-0.0575221255421638 0.278546720743179</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
 		</cell>
 		<cell>
 			<name>upperarm_l</name>
-			<pos>182 428</pos>
-			<size>145 245</size>
-			<pivot>0 0</pivot>
+			<pos>169 426</pos>
+			<size>192 257</size>
+			<pivot>-0.13541667163372 0.270428001880646</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -149,7 +149,7 @@
 			<name>wing_r</name>
 			<pos>13 673</pos>
 			<size>226 351</size>
-			<pivot>0 0</pivot>
+			<pivot>-0.221238940954208 -0.0498575493693352</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
@@ -158,7 +158,7 @@
 			<name>wing_l</name>
 			<pos>254 670</pos>
 			<size>242 354</size>
-			<pivot>0 0</pivot>
+			<pivot>-0.330578505992889 -0.115819208323956</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>
