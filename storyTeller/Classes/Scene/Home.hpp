@@ -23,17 +23,15 @@ private:
         t_Quest = 1,
         t_Option,
         t_HomeBg,
-        t_MenuDeco,
         t_Icon,
         t_Character,
     };
     
     enum ZOder
     {
-        z_MainBg = 1,
-        z_Quest,
+        z_Quest = 1,
         z_Option,
-        z_MenuDeco,
+        z_HomeBg,
         z_Icon,
         z_Character,
     };
@@ -55,10 +53,17 @@ private:
         ui::Button::create("ImageFile/UIOption.png"),
     };
     
+    ui::Button* stageSelectButton[1] =
+    {
+        ui::Button::create("ImageFile/IconBg.png"),
+    };
+    
     Size winSize = Director::getInstance()->getWinSize();
     
     void CreateMenuWindow();
     void touchEvent(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
+    void SetSelectUnable(ui::Button* button);
+    void SetSelectDisable(ui::Button* button);
     
 public:
     
