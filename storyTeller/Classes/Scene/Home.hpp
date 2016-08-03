@@ -39,11 +39,12 @@ private:
     };
     
     //背景の作成
-    Sprite* background[3] =
+    Sprite* background[4] =
     {
         Sprite::create("ImageFile/Menubg.png"),
         Sprite::create("ImageFile/kawabe.png"),
         Sprite::create("ImageFile/Menu.png"),
+        Sprite::create("ImageFile/IconBg.png"),
     };
     
     //ボタンの作成

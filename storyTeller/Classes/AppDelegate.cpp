@@ -3,6 +3,7 @@
 #include "Scene/Home.hpp"
 #include "Scene/MainApp.hpp"
 #include "Scene/Game.hpp"
+
 USING_NS_CC;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320),

@@ -117,7 +117,8 @@
 		<value>st_monster01.ssae</value>
 	</animepackNames>
 	<lastAnimeFile>st_monster01.ssae</lastAnimeFile>
-	<lastAnimeName>no_anime</lastAnimeName>
-	<lastCellMapFile>stage_sample2.ssce</lastCellMapFile>
-	<lastPart>root</lastPart>
+	<lastAnimeName>st_attack_specter01</lastAnimeName>
+	<lastCellMapFile>st_monster01.ssce</lastCellMapFile>
+	<lastCell>wing_r</lastCell>
+	<lastPart>wing_r</lastPart>
 </SpriteStudioProject>

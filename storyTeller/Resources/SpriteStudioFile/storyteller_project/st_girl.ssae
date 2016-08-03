@@ -243,7 +243,7 @@
 				<alphaBlendType>mix</alphaBlendType>
 				<show>1</show>
 				<locked>0</locked>
-				<expandAttribute>0</expandAttribute>
+				<expandAttribute>1</expandAttribute>
 				<expandChildren>1</expandChildren>
 			</value>
 			<value>
@@ -285,7 +285,7 @@
 				<alphaBlendType>mix</alphaBlendType>
 				<show>1</show>
 				<locked>0</locked>
-				<expandAttribute>0</expandAttribute>
+				<expandAttribute>1</expandAttribute>
 				<expandChildren>1</expandChildren>
 			</value>
 			<value>
@@ -2716,6 +2716,3567 @@
 			</partAnimes>
 		</anime>
 		<anime>
+			<name>st_damage_girl01</name>
+			<overrideSettings>1</overrideSettings>
+			<settings>
+				<fps>60</fps>
+				<frameCount>25</frameCount>
+				<sortMode>prio</sortMode>
+				<canvasSize>1024 1024</canvasSize>
+				<pivot>0 -0.5</pivot>
+				<bgColor>FF323232</bgColor>
+				<gridSize>32</gridSize>
+				<gridColor>FF808080</gridColor>
+				<outStartNum>0</outStartNum>
+			</settings>
+			<labels />
+			<partAnimes>
+				<partAnime>
+					<partName>root</partName>
+					<attributes>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>hip_null</partName>
+					<attributes>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>26</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>6.5</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>0</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-150</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>-170</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>-125</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>-101</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-150</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-150</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-150</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>0</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>hip_1</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>hip</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>hip</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>hip</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>hip</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>0</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>490</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>490</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>490</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>490</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -0.942148745059967 3.8294415473938</curve>
+								<value>0</value>
+							</key>
+							<key time="3" ipType="bezier">
+								<curve syncStartEnd="1">0.942148745059967 -3.8294415473938 -1.01446282863617 2.33502531051636</curve>
+								<value>-8.18128204345703</value>
+							</key>
+							<key time="7" ipType="bezier">
+								<curve syncStartEnd="1">1.01446282863617 -2.33502531051636 -1.82438015937805 -0.4670050740242</curve>
+								<value>-20.4043025970459</value>
+							</key>
+							<key time="13" ipType="bezier">
+								<curve syncStartEnd="1">1.82438015937805 0.4670050740242 -1.72314047813416 -0.18680202960968</curve>
+								<value>-25.1995239257813</value>
+							</key>
+							<key time="18" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>3.83926916122437</value>
+							</key>
+							<key time="24" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>5</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>5</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>5</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>5</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>body</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>body</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>body</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>body</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>body</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>5</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>11</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>11</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>17</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>5</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>5</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>5</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>528</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>524</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>524</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>522</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>528</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>528</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>528</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1.20454549789429 3.84786772727966</curve>
+								<value>0</value>
+							</key>
+							<key time="3" ipType="bezier">
+								<curve syncStartEnd="1">1.20454549789429 -3.84786772727966 -1 0</curve>
+								<value>-21.2276344299316</value>
+							</key>
+							<key time="7" ipType="bezier">
+								<curve syncStartEnd="1">1 0 -1.04545450210571 -3.25588846206665</curve>
+								<value>-28.307767868042</value>
+							</key>
+							<key time="13" ipType="bezier">
+								<curve syncStartEnd="1">1.04545450210571 3.25588846206665 -1.15909087657928 0</curve>
+								<value>-29.2516040802002</value>
+							</key>
+							<key time="18" ipType="bezier">
+								<curve syncStartEnd="1">1.15909087657928 0 -1 0</curve>
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="1">1.15909087657928 0 -1 0</curve>
+								<value>2.00772380828857</value>
+							</key>
+							<key time="24" ipType="bezier">
+								<curve syncStartEnd="1">1.15909087657928 0 0 0</curve>
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>6</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>6</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>head</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>head</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>head</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>head</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>head</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-0.175549030303955</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-0.175549030303955</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-0.175549030303955</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-0.175549030303955</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>89.5045318603516</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>89.5045318603516</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>89.5045318603516</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>89.5045318603516</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">0 0.119729280471802 -1.59090912342072 0.359187841415405</curve>
+								<value>0</value>
+							</key>
+							<key time="3" ipType="bezier">
+								<curve syncStartEnd="1">1.59090912342072 -0.359187841415405 -0.772727191448212 4.90890026092529</curve>
+								<value>28.977611541748</value>
+							</key>
+							<key time="7" ipType="bezier">
+								<curve syncStartEnd="1">0.772727191448212 -4.90890026092529 -1 0</curve>
+								<value>-1.49224042892456</value>
+							</key>
+							<key time="13" ipType="bezier">
+								<curve syncStartEnd="1">1 0 -1.57705974578857 -1.16923117637634</curve>
+								<value>-25.0114669799805</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>2.81032681465149</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>3</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>3</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>3</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>3</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>hair</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>hair</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>hair</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>hair</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>hair</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>0.222371816635132</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0.222371816635132</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>0.222371816635132</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0.222371816635132</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>93.0497894287109</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>93.0497894287109</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>93.0497894287109</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>93.0497894287109</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>-18.3242855072021</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>-17.4909210205078</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>-10.1660404205322</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>4.28546142578125</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>2</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>upperarm_r</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>upperarm_r</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>upperarm_r</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>upperarm_r</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>upperarm_r</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-18.0395488739014</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-18.0395488739014</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-18.0395488739014</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-18.0395488739014</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>79.476188659668</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>79.476188659668</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>79.476188659668</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>79.476188659668</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>2.69689512252808</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>2</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>arm_r</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>arm_r</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>arm_r</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>arm_r</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>arm_r</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-38.96044921875</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-38.96044921875</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-38.96044921875</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-38.96044921875</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-82.8695526123047</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-82.8695526123047</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-82.8695526123047</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-82.8695526123047</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="7" ipType="bezier">
+								<curve syncStartEnd="1">1.81818175315857 -0.205245345830917 -2.38636350631714 -0.102622672915459</curve>
+								<value>0</value>
+							</key>
+							<key time="13" ipType="bezier">
+								<curve syncStartEnd="1">2.38636350631714 0.102622672915459 -1 0</curve>
+								<value>-30.6458950042725</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="1">1 0 -1 0</curve>
+								<value>2.21470856666565</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>1</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>1</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>1</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>object1</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0">
+								<value>-29.4905700683594</value>
+							</key>
+							<key time="3">
+								<value>-29.4905700683594</value>
+							</key>
+							<key time="18">
+								<value>-29.4905700683594</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-29.4905700683594</value>
+							</key>
+							<key time="24">
+								<value>-29.4905700683594</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0">
+								<value>-87.4191284179688</value>
+							</key>
+							<key time="3">
+								<value>-87.4191284179688</value>
+							</key>
+							<key time="18">
+								<value>-87.4191284179688</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-87.4191284179688</value>
+							</key>
+							<key time="24">
+								<value>-87.4191284179688</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>-22.0386123657227</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>-66.8854064941406</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>-76.6270599365234</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-22.0386123657227</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-18.1603603363037</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-22.0386123657227</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="0">
+								<value>1.32428872585297</value>
+							</key>
+							<key time="3">
+								<value>1.32428872585297</value>
+							</key>
+							<key time="7">
+								<value>1.32428872585297</value>
+							</key>
+							<key time="13">
+								<value>1.32428872585297</value>
+							</key>
+							<key time="18">
+								<value>1.32428872585297</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>1.32428872585297</value>
+							</key>
+							<key time="24">
+								<value>1.32428872585297</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">7.02272748947144 0.00468697166070342 -2.11363625526428 0.00937397312372923</curve>
+								<value>1.31673753261566</value>
+							</key>
+							<key time="3" ipType="bezier">
+								<curve syncStartEnd="1">2.11363625526428 -0.00937397312372923 -3.06818151473999 0</curve>
+								<value>0.570961773395538</value>
+							</key>
+							<key time="7" ipType="bezier">
+								<curve syncStartEnd="1">3.06818151473999 0 -2.02272725105286 -0.00937394332140684</curve>
+								<value>0.549044787883759</value>
+							</key>
+							<key time="13" ipType="bezier">
+								<curve syncStartEnd="1">2.02272725105286 0.00937394332140684 -1 0</curve>
+								<value>1.31673753261566</value>
+							</key>
+							<key time="18">
+								<value>1.31673753261566</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>1.31673753261566</value>
+							</key>
+							<key time="24">
+								<value>1.31673753261566</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0">
+								<value>1</value>
+							</key>
+							<key time="18">
+								<value>1</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>1</value>
+							</key>
+							<key time="24">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>object2</partName>
+					<attributes>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-9.00000190734863</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-9.00000190734863</value>
+							</key>
+							<key time="21" ipType="deceleration">
+								<value>-9.00000190734863</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-9.00000190734863</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>6.39336395263672</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>6.39336395263672</value>
+							</key>
+							<key time="21" ipType="deceleration">
+								<value>6.39336395263672</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>6.39336395263672</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="21" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>upperarm_l</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>upperarm_l</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>upperarm_l</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>upperarm_l</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>upperarm_l</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>24.7231636047363</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>24.7231636047363</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>24.7231636047363</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>24.7231636047363</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>69.8936157226563</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>69.8936157226563</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>69.8936157226563</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>69.8936157226563</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>0.404914051294327</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>-10.0745372772217</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>2.07797122001648</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>8</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>8</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>8</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>8</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>arm_l</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>arm_l</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>arm_l</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>arm_l</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>arm_l</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>13.2768402099609</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>13.2768402099609</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>13.2768402099609</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>13.2768402099609</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-89.8177795410156</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-89.8177795410156</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-89.8177795410156</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-89.8177795410156</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>-103.244972229004</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>-41.9376678466797</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>0</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>7</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>7</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>7</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>7</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>object3</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+							<key time="3">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+							<key time="7">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+							<key time="13">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-25.8675689697266</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>-25.8675689697266</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>-25.8675689697266</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>-25.8675689697266</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-25.8675689697266</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-25.8675689697266</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-25.8675689697266</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-81.1193237304688</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>-81.1193237304688</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>-81.1193237304688</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>-81.1193237304688</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-81.1193237304688</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-81.1193237304688</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-81.1193237304688</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>19.2786560058594</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>19.2786560058594</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>19.2786560058594</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>19.2786560058594</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>19.2786560058594</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>19.2786560058594</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>19.2786560058594</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>6</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>6</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>tight_l</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>tight_l</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>tight_l</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>tight_l</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>tight_l</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>27.455696105957</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>27.455696105957</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>27.455696105957</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>27.455696105957</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>424.717407226563</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>424.717407226563</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>424.717407226563</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>424.717407226563</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>-35.2976264953613</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>-33.6032943725586</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-5.31320238113403</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>4</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>4</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>4</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>leg_l</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>leg_l</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>leg_l</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>leg_l</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>leg_l</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>15.8456745147705</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>15.8456745147705</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>15.8456745147705</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>15.8456745147705</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-103.555229187012</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-103.555229187012</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-103.555229187012</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-103.555229187012</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>69.2621688842773</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>38.0359268188477</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>9.9423885345459</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>3</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>3</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>3</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>3</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>foot_l</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>foot_l</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>foot_l</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>foot_l</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>foot_l</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-7.62939453125E-6</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-7.62939453125E-6</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-7.62939453125E-6</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-7.62939453125E-6</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-88</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-88</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-88</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-88</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="linear">
+								<value>-8.5667142868042</value>
+							</key>
+							<key time="7" ipType="linear">
+								<value>27.7344493865967</value>
+							</key>
+							<key time="13" ipType="linear">
+								<value>19.0357093811035</value>
+							</key>
+							<key time="18" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="1">1 0 -1 0</curve>
+								<value>-2.58921504020691</value>
+							</key>
+							<key time="24" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>2</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>tight_r</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>tight_r</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>tight_r</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>tight_r</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>tight_r</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-16.1265830993652</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-16.1265830993652</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-16.1265830993652</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-16.1265830993652</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>422.782623291016</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>422.782623291016</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>422.782623291016</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>422.782623291016</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>-40.5111885070801</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>-52.4514656066895</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>-41.0873184204102</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-4.38012313842773</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>2</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>leg_r</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>leg_r</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>leg_r</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>leg_r</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>leg_r</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-3.82463693618774</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-3.82463693618774</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-3.82463693618774</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-3.82463693618774</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-102.37720489502</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-102.37720489502</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-102.37720489502</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-102.37720489502</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="deceleration">
+								<value>28.9422721862793</value>
+							</key>
+							<key time="7" ipType="deceleration">
+								<value>6.91637897491455</value>
+							</key>
+							<key time="13" ipType="deceleration">
+								<value>25.6030120849609</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>9.72011566162109</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>1</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>1</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>1</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>foot_r</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>foot_r</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>foot_r</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>foot_r</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>foot_r</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-7.99999809265137</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-7.99999809265137</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-7.99999809265137</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-7.99999809265137</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-84</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>-84</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>-84</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>-84</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>-4.79032754898071</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>2</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>shadow</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>shadow</name>
+								</value>
+							</key>
+							<key time="18">
+								<value>
+									<mapId>0</mapId>
+									<name>shadow</name>
+								</value>
+							</key>
+							<key time="21">
+								<value>
+									<mapId>0</mapId>
+									<name>shadow</name>
+								</value>
+							</key>
+							<key time="24">
+								<value>
+									<mapId>0</mapId>
+									<name>shadow</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>3</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>3</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>3</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>3</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>6</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>6</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>0</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="18" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -1 0</curve>
+								<value>0</value>
+							</key>
+							<key time="24" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+			</partAnimes>
+		</anime>
+		<anime>
+			<name>st_dead_girl01</name>
+			<overrideSettings>1</overrideSettings>
+			<settings>
+				<fps>60</fps>
+				<frameCount>53</frameCount>
+				<sortMode>prio</sortMode>
+				<canvasSize>1024 1024</canvasSize>
+				<pivot>0 -0.5</pivot>
+				<bgColor>FF323232</bgColor>
+				<gridSize>32</gridSize>
+				<gridColor>FF808080</gridColor>
+				<outStartNum>0</outStartNum>
+			</settings>
+			<labels />
+			<partAnimes>
+				<partAnime>
+					<partName>root</partName>
+					<attributes>
+						<attribute tag="SCLX">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="38" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="45" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="47" ipType="acceleration">
+								<value>1.05795931816101</value>
+							</key>
+							<key time="52" ipType="acceleration">
+								<value>0.0399999991059303</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="38" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="45" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="47" ipType="acceleration">
+								<value>0.915918350219727</value>
+							</key>
+							<key time="52" ipType="acceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="47" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="52" ipType="linear">
+								<value>0.0599999986588955</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="38">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>hip_null</partName>
+					<attributes>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>153</value>
+							</key>
+							<key time="22" ipType="deceleration">
+								<value>153</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>153</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="acceleration">
+								<value>-150</value>
+							</key>
+							<key time="6" ipType="acceleration">
+								<value>-243</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-233</value>
+							</key>
+							<key time="22" ipType="deceleration">
+								<value>-243</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-243</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>18</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>18</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>hip_1</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>hip</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-3.46816658973694</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-3.46816658973694</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>490</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>446.965484619141</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>446.965484619141</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-18.3600101470947</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-18.3600101470947</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="14" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="38" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="14" ipType="linear">
+								<value>0.860343098640442</value>
+							</key>
+							<key time="38" ipType="linear">
+								<value>0.860343098640442</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>5</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>body</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>body</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>5</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-3.5564603805542</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-3.5564603805542</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>528</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>488.7216796875</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>488.7216796875</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>6</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>head</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>head</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-0.175549030303955</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>6.9108681678772</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>6.9108681678772</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>89.5045318603516</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>78.4815368652344</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>78.4815368652344</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="6" ipType="deceleration">
+								<value>-12.2678689956665</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>15.0451917648315</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>15.0451917648315</value>
+							</key>
+							<key time="45" ipType="deceleration">
+								<value>15.7192478179932</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>3</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>hair</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>hair</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>0.222371816635132</value>
+							</key>
+							<key time="6" ipType="deceleration">
+								<value>0.480408430099487</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>0.219999998807907</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>0.222371816635132</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>93.0497894287109</value>
+							</key>
+							<key time="6" ipType="deceleration">
+								<value>105.046981811523</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>93.0500030517578</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>93.0497894287109</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="6" ipType="bezier">
+								<curve syncStartEnd="1">1.25103306770325 -0.689272403717041 -1.78099179267883 -1.03390860557556</curve>
+								<value>-20.0119438171387</value>
+							</key>
+							<key time="14" ipType="bezier">
+								<curve syncStartEnd="1">1.78099179267883 1.03390860557556 -4.48657035827637 3.32054924964905</curve>
+								<value>-19.6021957397461</value>
+							</key>
+							<key time="38" ipType="bezier">
+								<curve syncStartEnd="1">4.48657035827637 -3.32054924964905 -3.9008264541626 0.0873250961303711</curve>
+								<value>-14.8100004196167</value>
+							</key>
+							<key time="45" ipType="bezier">
+								<curve syncStartEnd="1">3.9008264541626 -0.0873250961303711 0 0</curve>
+								<value>-15.6300001144409</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="6" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="38" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="6" ipType="linear">
+								<value>0.810423910617828</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="38" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>upperarm_r</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>upperarm_r</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-18.0395488739014</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-27.2140426635742</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-27.2140426635742</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>79.476188659668</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>38.2957344055176</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>38.2957344055176</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-3.48552870750427</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-3.48552870750427</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>arm_r</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>arm_r</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-38.96044921875</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-82.8695526123047</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-57.1152458190918</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-57.1152458190918</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>object1</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0">
+								<value>-29.4905700683594</value>
+							</key>
+							<key time="14">
+								<value>-53.1637763977051</value>
+							</key>
+							<key time="23">
+								<value>-22.907190322876</value>
+							</key>
+							<key time="30">
+								<value>-28.7958927154541</value>
+							</key>
+							<key time="38">
+								<value>-20.7916526794434</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0">
+								<value>-87.4191284179688</value>
+							</key>
+							<key time="14">
+								<value>-111.90544128418</value>
+							</key>
+							<key time="23">
+								<value>-132.989532470703</value>
+							</key>
+							<key time="30">
+								<value>-138.40461730957</value>
+							</key>
+							<key time="38">
+								<value>-150.063613891602</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>-22.0386123657227</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>42.7214660644531</value>
+							</key>
+							<key time="23" ipType="deceleration">
+								<value>35.6099090576172</value>
+							</key>
+							<key time="30" ipType="deceleration">
+								<value>47.4100952148438</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>42.7214660644531</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="0">
+								<value>1.32428872585297</value>
+							</key>
+							<key time="14">
+								<value>1.17460429668427</value>
+							</key>
+							<key time="23">
+								<value>1.17460429668427</value>
+							</key>
+							<key time="30">
+								<value>1.17460429668427</value>
+							</key>
+							<key time="38">
+								<value>1.17460429668427</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="0">
+								<value>1.31673753261566</value>
+							</key>
+							<key time="14">
+								<value>1.16394770145416</value>
+							</key>
+							<key time="23">
+								<value>0.865324914455414</value>
+							</key>
+							<key time="30">
+								<value>0.575199902057648</value>
+							</key>
+							<key time="38">
+								<value>0.689563512802124</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>object2</partName>
+					<attributes>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-9.00000190734863</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-9.00000190734863</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>6.39336395263672</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>6.39336395263672</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="38">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>upperarm_l</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>upperarm_l</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>24.7231636047363</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>69.8936157226563</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-7.54707384109497</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-7.54707384109497</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>8</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>arm_l</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>arm_l</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>13.2768402099609</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-89.8177795410156</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-15.6991691589355</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-15.6991691589355</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>7</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>object3</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+							<key time="38">
+								<value>
+									<mapId>0</mapId>
+									<name>object1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-25.8675689697266</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-25.8675689697266</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-81.1193237304688</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-81.1193237304688</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>19.2786560058594</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>19.2786560058594</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>6</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>tight_l</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>tight_l</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>27.455696105957</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>424.717407226563</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-46.9872741699219</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-46.9872741699219</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>leg_l</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>leg_l</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>15.8456745147705</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>7.89022541046143</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-103.555229187012</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-132.200500488281</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>125.062683105469</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>3</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>foot_l</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>foot_l</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-7.62939453125E-6</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-3.89384150505066</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-88</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-105.687225341797</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>-25.3911457061768</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>tight_r</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>tight_r</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-16.1265830993652</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>422.782623291016</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-43.2068176269531</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-43.2068176269531</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>leg_r</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>leg_r</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-3.82463693618774</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>1.12141215801239</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>1.12141215801239</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-102.37720489502</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-125.170539855957</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-125.170539855957</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="deceleration">
+								<value>-116.050003051758</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>-116.054222106934</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="0">
+								<value>1</value>
+							</key>
+							<key time="3">
+								<value>-1</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>-1</value>
+							</key>
+							<key time="38" ipType="linear">
+								<value>-1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="38" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>foot_r</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>foot_r</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>-7.99999809265137</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>-84</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="linear">
+								<value>14.088306427002</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>-77.4675750732422</value>
+							</key>
+							<key time="38" ipType="linear">
+								<value>-77.4675750732422</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="3" ipType="linear">
+								<value>0.800000011920929</value>
+							</key>
+							<key time="4" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>shadow</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>shadow</name>
+								</value>
+							</key>
+							<key time="38">
+								<value>
+									<mapId>0</mapId>
+									<name>shadow</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="deceleration">
+								<value>3</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>3</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="deceleration">
+								<value>6</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>6</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="deceleration">
+								<value>0</value>
+							</key>
+							<key time="38" ipType="deceleration">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="38">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+			</partAnimes>
+		</anime>
+		<anime>
 			<name>st_jump_girl01</name>
 			<overrideSettings>1</overrideSettings>
 			<settings>
@@ -4049,7 +7610,7 @@
 							<key time="0">
 								<value>
 									<mapId>0</mapId>
-									<name>object2</name>
+									<name>object1</name>
 								</value>
 							</key>
 							<key time="8">
@@ -4085,13 +7646,13 @@
 							<key time="60">
 								<value>
 									<mapId>0</mapId>
-									<name>object2</name>
+									<name>object1</name>
 								</value>
 							</key>
 						</attribute>
 						<attribute tag="POSX">
 							<key time="0" ipType="acceleration">
-								<value>-78.4905700683594</value>
+								<value>-29.4905700683594</value>
 							</key>
 							<key time="8" ipType="acceleration">
 								<value>-78.4905700683594</value>
@@ -4108,13 +7669,13 @@
 							<key time="54" ipType="deceleration">
 								<value>-78.4905700683594</value>
 							</key>
-							<key time="60" ipType="linear">
-								<value>-78.4905700683594</value>
+							<key time="60">
+								<value>-29.4905700683594</value>
 							</key>
 						</attribute>
 						<attribute tag="POSY">
 							<key time="0" ipType="acceleration">
-								<value>-91.4191284179688</value>
+								<value>-87.4191284179688</value>
 							</key>
 							<key time="8" ipType="acceleration">
 								<value>-91.4191284179688</value>
@@ -4131,8 +7692,8 @@
 							<key time="54" ipType="deceleration">
 								<value>-91.4191284179688</value>
 							</key>
-							<key time="60" ipType="linear">
-								<value>-91.4191284179688</value>
+							<key time="60">
+								<value>-87.4191284179688</value>
 							</key>
 						</attribute>
 						<attribute tag="ROTZ">
@@ -4154,7 +7715,7 @@
 							<key time="54" ipType="deceleration">
 								<value>-22.0386123657227</value>
 							</key>
-							<key time="60" ipType="linear">
+							<key time="60" ipType="deceleration">
 								<value>-22.0386123657227</value>
 							</key>
 						</attribute>
@@ -4177,7 +7738,7 @@
 							<key time="54" ipType="deceleration">
 								<value>1.32428872585297</value>
 							</key>
-							<key time="60" ipType="linear">
+							<key time="60">
 								<value>1.32428872585297</value>
 							</key>
 						</attribute>
@@ -4200,13 +7761,13 @@
 							<key time="54" ipType="deceleration">
 								<value>1.31673753261566</value>
 							</key>
-							<key time="60" ipType="linear">
+							<key time="60">
 								<value>1.31673753261566</value>
 							</key>
 						</attribute>
 						<attribute tag="PRIO">
 							<key time="0" ipType="acceleration">
-								<value>0</value>
+								<value>1</value>
 							</key>
 							<key time="8" ipType="acceleration">
 								<value>0</value>
@@ -4223,8 +7784,8 @@
 							<key time="54" ipType="deceleration">
 								<value>0</value>
 							</key>
-							<key time="60" ipType="linear">
-								<value>0</value>
+							<key time="60">
+								<value>1</value>
 							</key>
 						</attribute>
 						<attribute tag="HIDE">
@@ -6923,72 +10484,72 @@
 							<key time="0">
 								<value>
 									<mapId>0</mapId>
-									<name>object2</name>
+									<name>object1</name>
 								</value>
 							</key>
 							<key time="32">
 								<value>
 									<mapId>0</mapId>
-									<name>object2</name>
+									<name>object1</name>
 								</value>
 							</key>
 						</attribute>
 						<attribute tag="POSX">
-							<key time="0" ipType="acceleration">
-								<value>-78.4905700683594</value>
+							<key time="0">
+								<value>-29.4905700683594</value>
 							</key>
-							<key time="32" ipType="linear">
-								<value>-78.4905700683594</value>
+							<key time="32">
+								<value>-29.4905700683594</value>
 							</key>
 						</attribute>
 						<attribute tag="POSY">
-							<key time="0" ipType="acceleration">
-								<value>-91.4191284179688</value>
+							<key time="0">
+								<value>-87.4191284179688</value>
 							</key>
-							<key time="32" ipType="linear">
-								<value>-91.4191284179688</value>
+							<key time="32">
+								<value>-87.4191284179688</value>
 							</key>
 						</attribute>
 						<attribute tag="ROTZ">
-							<key time="0" ipType="acceleration">
+							<key time="0" ipType="deceleration">
 								<value>-22.0386123657227</value>
 							</key>
-							<key time="32" ipType="linear">
+							<key time="32" ipType="deceleration">
 								<value>-22.0386123657227</value>
 							</key>
 						</attribute>
 						<attribute tag="SCLX">
 							<key time="0" ipType="bezier">
-								<curve syncStartEnd="0">6.94011116027832 0.00338409468531609 -6.14763212203979 0</curve>
+								<curve syncStartEnd="0">0 0 -6.14763212203979 0</curve>
 								<value>1.32428872585297</value>
 							</key>
 							<key time="16" ipType="bezier">
 								<curve syncStartEnd="1">6.14763212203979 0 -6.25069618225098 0.00338409468531609</curve>
 								<value>0.800000011920929</value>
 							</key>
-							<key time="32" ipType="linear">
+							<key time="32">
 								<value>1.32428872585297</value>
 							</key>
 						</attribute>
 						<attribute tag="SCLY">
 							<key time="0" ipType="bezier">
-								<curve syncStartEnd="0">7.35376024246216 -0.00930626131594181 -5.96378803253174 0.00930626131594181</curve>
+								<curve syncStartEnd="0">0 0 -5.96378803253174 0.00930626131594181</curve>
 								<value>1.31673753261566</value>
 							</key>
 							<key time="16" ipType="bezier">
 								<curve syncStartEnd="1">5.96378803253174 -0.00930626131594181 -8.27298069000244 -0.00930626131594181</curve>
 								<value>0.567706286907196</value>
 							</key>
-							<key time="32" ipType="linear">
+							<key time="32">
 								<value>1.31673753261566</value>
 							</key>
 						</attribute>
 						<attribute tag="PRIO">
-							<key time="0" ipType="acceleration">
-								<value>0</value>
+							<key time="0">
+								<value>1</value>
 							</key>
-							<key time="32" ipType="linear">
-								<value>0</value>
+							<key time="32">
+								<value>1</value>
 							</key>
 						</attribute>
 						<attribute tag="HIDE">
@@ -6997,52 +10558,6 @@
 							</key>
 							<key time="32">
 								<value>0</value>
-							</key>
-						</attribute>
-						<attribute tag="VCOL">
-							<key time="0" ipType="bezier">
-								<curve syncStartEnd="1">1 0 -9.87047386169434 0</curve>
-								<value>
-									<target>whole</target>
-									<blendType>mul</blendType>
-									<color>
-										<rgba>FF808080</rgba>
-										<rate>0</rate>
-									</color>
-								</value>
-							</key>
-							<key time="16" ipType="bezier">
-								<curve syncStartEnd="0">9.88161563873291 0 -1.22980523109436 0.00203045690432191</curve>
-								<value>
-									<target>vertex</target>
-									<blendType>mul</blendType>
-									<LT>
-										<rgba>FF430808</rgba>
-										<rate>1</rate>
-									</LT>
-									<RT>
-										<rgba>FF808080</rgba>
-										<rate>1</rate>
-									</RT>
-									<LB>
-										<rgba>FF808080</rgba>
-										<rate>1</rate>
-									</LB>
-									<RB>
-										<rgba>FF808080</rgba>
-										<rate>1</rate>
-									</RB>
-								</value>
-							</key>
-							<key time="32" ipType="linear">
-								<value>
-									<target>whole</target>
-									<blendType>mul</blendType>
-									<color>
-										<rgba>FF808080</rgba>
-										<rate>0</rate>
-									</color>
-								</value>
 							</key>
 						</attribute>
 					</attributes>
@@ -8474,18 +11989,18 @@
 							<key time="0">
 								<value>
 									<mapId>0</mapId>
-									<name>object2</name>
+									<name>object1</name>
 								</value>
 							</key>
 						</attribute>
 						<attribute tag="POSX">
-							<key time="0" ipType="deceleration">
-								<value>-78.4905700683594</value>
+							<key time="0">
+								<value>-29.4905700683594</value>
 							</key>
 						</attribute>
 						<attribute tag="POSY">
-							<key time="0" ipType="deceleration">
-								<value>-91.4191284179688</value>
+							<key time="0">
+								<value>-87.4191284179688</value>
 							</key>
 						</attribute>
 						<attribute tag="ROTZ">
@@ -8494,18 +12009,18 @@
 							</key>
 						</attribute>
 						<attribute tag="SCLX">
-							<key time="0" ipType="deceleration">
+							<key time="0">
 								<value>1.32428872585297</value>
 							</key>
 						</attribute>
 						<attribute tag="SCLY">
-							<key time="0" ipType="deceleration">
+							<key time="0">
 								<value>1.31673753261566</value>
 							</key>
 						</attribute>
 						<attribute tag="PRIO">
-							<key time="0" ipType="deceleration">
-								<value>0</value>
+							<key time="0">
+								<value>1</value>
 							</key>
 						</attribute>
 						<attribute tag="HIDE">
@@ -9564,42 +13079,42 @@
 							<key time="0">
 								<value>
 									<mapId>0</mapId>
-									<name>object2</name>
+									<name>object1</name>
 								</value>
 							</key>
 							<key time="15">
 								<value>
 									<mapId>0</mapId>
-									<name>object2</name>
+									<name>object1</name>
 								</value>
 							</key>
 							<key time="30">
 								<value>
 									<mapId>0</mapId>
-									<name>object2</name>
+									<name>object1</name>
 								</value>
 							</key>
 						</attribute>
 						<attribute tag="POSX">
-							<key time="0" ipType="deceleration">
-								<value>-78.4905700683594</value>
+							<key time="0">
+								<value>-29.4905700683594</value>
 							</key>
-							<key time="15" ipType="deceleration">
-								<value>-78.4905700683594</value>
+							<key time="15">
+								<value>-29.4905700683594</value>
 							</key>
-							<key time="30" ipType="deceleration">
-								<value>-78.4905700683594</value>
+							<key time="30">
+								<value>-29.4905700683594</value>
 							</key>
 						</attribute>
 						<attribute tag="POSY">
-							<key time="0" ipType="deceleration">
-								<value>-91.4191284179688</value>
+							<key time="0">
+								<value>-87.4191284179688</value>
 							</key>
-							<key time="15" ipType="deceleration">
-								<value>-91.4191284179688</value>
+							<key time="15">
+								<value>-87.4191284179688</value>
 							</key>
-							<key time="30" ipType="deceleration">
-								<value>-91.4191284179688</value>
+							<key time="30">
+								<value>-87.4191284179688</value>
 							</key>
 						</attribute>
 						<attribute tag="ROTZ">
@@ -9614,36 +13129,36 @@
 							</key>
 						</attribute>
 						<attribute tag="SCLX">
-							<key time="0" ipType="deceleration">
+							<key time="0">
 								<value>1.32428872585297</value>
 							</key>
-							<key time="15" ipType="deceleration">
+							<key time="15">
 								<value>1.32428872585297</value>
 							</key>
-							<key time="30" ipType="deceleration">
+							<key time="30">
 								<value>1.32428872585297</value>
 							</key>
 						</attribute>
 						<attribute tag="SCLY">
-							<key time="0" ipType="deceleration">
+							<key time="0">
 								<value>1.31673753261566</value>
 							</key>
-							<key time="15" ipType="deceleration">
+							<key time="15">
 								<value>1.31673753261566</value>
 							</key>
-							<key time="30" ipType="deceleration">
+							<key time="30">
 								<value>1.31673753261566</value>
 							</key>
 						</attribute>
 						<attribute tag="PRIO">
-							<key time="0" ipType="deceleration">
-								<value>0</value>
+							<key time="0">
+								<value>1</value>
 							</key>
-							<key time="15" ipType="deceleration">
-								<value>0</value>
+							<key time="15">
+								<value>1</value>
 							</key>
-							<key time="30" ipType="deceleration">
-								<value>0</value>
+							<key time="30">
+								<value>1</value>
 							</key>
 						</attribute>
 						<attribute tag="HIDE">
