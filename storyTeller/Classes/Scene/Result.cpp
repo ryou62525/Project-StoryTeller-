@@ -27,8 +27,10 @@ bool Result::init()
 
 void Result::update(float deltaTime)
 {
+    
     Label* label = Label::create();
     label->setPosition(500, 500);
     label->setString("test");
     this->addChild(label);
+
 }

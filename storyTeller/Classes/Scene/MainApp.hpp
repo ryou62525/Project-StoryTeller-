@@ -18,7 +18,6 @@ public:
     
     static Scene* CreateScene();
     bool init() override;
-    void update(float deltaTime) override;
     CREATE_FUNC(MainApp)
     
 };

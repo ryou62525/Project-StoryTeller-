@@ -25,8 +25,3 @@ bool MainApp::init()
     if(!Layer::init()){return false;}
     return true;
 }
-
-void MainApp::update(float delta)
-{
-    
-}

@@ -27,26 +27,27 @@ bool Title::init()
  
     //イベントリスナーの生成
     auto listener = EventListenerTouchOneByOne::create();
-    listener->setSwallowTouches(true);
-    
-    listener->onTouchBegan = [&](Touch* touch, Event* event)
+    //listener->setSwallowTouches(true);
+    listener->onTouchBegan = [this](Touch* touch, Event* event)
     {
-        auto nextScene = Home::CreateScene();
-        Scene* transision;
+        this->getEventDispatcher()->removeAllEventListeners();
+        auto delay = DelayTime::create(2);
         
-        transision = TransitionFade::create(1.0f, nextScene);
-        Director::getInstance()->replaceScene(transision);
+        auto startGame = CallFunc::create([]
+        {
+            Scene* scene = Home::CreateScene();
+            auto trasition = TransitionFade::create(1, scene);
+            Director::getInstance()->replaceScene(trasition);
+        });
+        
+        this->runAction(Sequence::create(delay, startGame, NULL));
+        
         return true;
     };
     
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     return true;
-}
-
-void Title::update(float deltaTime)
-{
-    
 }
 
 //画像の情報をテキストファイルから呼び出す
@@ -62,6 +63,7 @@ void Title::SetImageInfo()
     
     inFile >> imageValue;
     Sprite* bgSprite[imageValue];
+    auto blink = Sequence::create(FadeTo::create(0.5, 60),FadeTo::create(0.5, 255), NULL);
     
     for(int i = 0; i < imageValue; i++)
     {
@@ -73,6 +75,11 @@ void Title::SetImageInfo()
         bgSprite[i] = Sprite::create(_filePath);
         bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
         bgSprite[i]->setScale(size.x, size.y);
+        
+        if(i == 1)
+        {
+            bgSprite[1]->runAction(RepeatForever::create(blink));
+        }
         
         this->addChild(bgSprite[i]);
     }

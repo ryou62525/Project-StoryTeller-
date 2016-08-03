@@ -10,7 +10,6 @@
 #include "Home.hpp"
 #include "Game.hpp"
 #include <fstream>
-USING_NS_CC;
 
 Scene* Home::CreateScene()
 {
@@ -25,13 +24,7 @@ bool Home::init()
 {
     if(!Layer::init()){ return false; }
     
-    menuSerect = MenuSerect::HOME;
-    sprite2 = Sprite::create("ImageFile/Menubg.png");
-    sprite2->setPosition(960, 550);
-    this->addChild(sprite2);
-
-    SetBgImage();
-    SetUiImage();
+    CreateMenuWindow();
     
     return true;
 }
@@ -41,79 +34,53 @@ void Home::update(float deltaTime)
     
 }
 
-void Home::SetBgImage()
+void Home::CreateMenuWindow()
 {
-    auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeImagePath.txt");
-    std::ifstream inFile(filePath);
-    assert(inFile);
+    background[0]->setPosition(960,555);
+    addChild(background[0],t_HomeBg);
+    reorderChild(background[0], 2);
     
-    size_t imageValue;
-    std::string _imagePath;
-    Vec2 pos, size;
+    background[1]->setPosition(winSize.width/2, winSize.height/2);
+    background[1]->setScale(0.8, 0.8);
+    addChild(background[1],1);
+    
+    background[2]->setPosition(winSize.width/6, winSize.height/1.2);
+    background[2]->setScale(0.2, 0.2);
+    addChild(background[2],3);
 
-    inFile >> imageValue;
-    Sprite* bgSprite[imageValue];
-    for(int i = 0; i < imageValue; i++)
-    {
-        inFile >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
-        
-        bgSprite[i] = Sprite::create(_imagePath);
-        bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
-        bgSprite[i]->setScale(size.x, size.y);
-        this->addChild(bgSprite[i]);
-    }
-}
-
-void Home::SetUiImage()
-{
-    auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeUIImage.txt");
-    std::ifstream inFile(filePath);
-    assert(inFile);
+    button[0]->setPosition(Vec2(winSize.width/2, 200));
+    button[1]->setPosition(Vec2(winSize.width/2, 400));
+    button[2]->setPosition(Vec2(winSize.width/2, 600));
     
-    size_t imageValue;
-    std::string _imagePath;
-    Vec2 pos, size;
+    button[0]->setScale(0.15, 0.15);
+    button[1]->setScale(0.15, 0.15);
+    button[2]->setScale(0.15, 0.15);
     
-    inFile >> imageValue;
+    addChild(button[0],z_Icon);
+    addChild(button[1],z_Icon);
+    addChild(button[2],z_Icon);
     
-    ui::Button* button[imageValue];
-    for(int i = 0; i < imageValue; i++)
-    {
-        inFile >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
-
-        button[i] = ui::Button::create(_imagePath);
-        button[i]->setPosition(Vec2(pos.x, pos.y));
-        button[i]->setScale(size.x, size.y);
-        this->addChild(button[i]);
-        button[i]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
-   
-    }
-    button[1]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
-}
-
-void Home::SetQuestMenu()
-{
-    auto sprite = Sprite::create("ImageFile/kawabe.png");
-    sprite->setPosition(1000, 600);
-    sprite->setScale(0.5, 0.5);
-    this->addChild(sprite);
-}
-
-void Home::touchEvent(Ref *pSender, ui::Widget::TouchEventType type)
-{
+    button[0]->addTouchEventListener([this](Ref *pSender, cocos2d::ui::Widget::TouchEventType type)
+                                     {
+                                         if(type == ui::Widget::TouchEventType::BEGAN)
+                                         {
+                                             this->reorderChild(background[1], 1);
+                                         }
+                                     });
     
-    Scene* nextScene = Home::CreateScene();
+    button[1]->addTouchEventListener([this](Ref *pSender, cocos2d::ui::Widget::TouchEventType type)
+                                     {
+                                         if(type == ui::Widget::TouchEventType::BEGAN)
+                                         {
+                                             this->reorderChild(background[1], 2);
+                                         }
+                                     });
     
-    Scene* transition;
-    
-    switch (type) {
-        case ui::Widget::TouchEventType::BEGAN:
-            
-            transition = TransitionFade::create(1.0f, nextScene);
-            
-            break;
-            
-        default:
-            break;
-    }
+    button[2]->addTouchEventListener([this](Ref *pSender, cocos2d::ui::Widget::TouchEventType type)
+                                     {
+                                         if(type == ui::Widget::TouchEventType::BEGAN)
+                                         {
+                                             this->reorderChild(background[1], 1);
+                                         }
+                                     });
 }

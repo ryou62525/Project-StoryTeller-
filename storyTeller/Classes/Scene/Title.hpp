@@ -19,7 +19,6 @@ public:
     static Scene* CreateScene();
     virtual bool init();
     void SetImageInfo();
-    void update(float deltaTime);
     CREATE_FUNC(Title)
     
 };

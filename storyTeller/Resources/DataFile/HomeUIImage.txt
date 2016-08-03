@@ -1,4 +1,4 @@
-7
+3
 ImageFile/UIHome.png
 1750
 120
