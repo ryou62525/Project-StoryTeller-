@@ -1,0 +1,10 @@
+ImageFile/Menubg.png
+960
+550
+0.8
+0.8
+ImageFile/Menu.png
+250
+950
+0.2
+0.2
