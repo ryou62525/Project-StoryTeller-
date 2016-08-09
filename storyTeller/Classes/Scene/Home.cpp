@@ -9,6 +9,10 @@
 
 #include "Home.hpp"
 #include "Game.hpp"
+
+#include "../../cocos2d/external/tinyxml2/tinyxml2.h"   //xmlファイルを読み込む機能の追加
+#include "../../cocos2d/external/json/rapidjson.h"      //jsonファイルを読み込む機能の追加
+
 #include <fstream>
 
 Scene* Home::CreateScene()

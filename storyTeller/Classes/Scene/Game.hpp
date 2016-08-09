@@ -14,6 +14,13 @@ USING_NS_CC;
 
 class Game : public cocos2d::Layer
 {
+private:
+    
+    int pos;
+    ActionCamera* camera;
+    Sprite3D* stage;
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    
 public:
     
     static Scene* CreateScene();
