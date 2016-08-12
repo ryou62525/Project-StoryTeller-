@@ -46,24 +46,24 @@ private:
     };
     
     //ボタンの作成
-    ui::Button* button[3] =
+    cocos2d::ui::Button* button[3] =
     {
-        ui::Button::create("ImageFile/UIHome.png"),
-        ui::Button::create("ImageFile/UIQuest.png"),
-        ui::Button::create("ImageFile/UIOption.png"),
+        cocos2d::ui::Button::create("ImageFile/UIHome.png"),
+        cocos2d::ui::Button::create("ImageFile/UIQuest.png"),
+        cocos2d::ui::Button::create("ImageFile/UIOption.png"),
     };
     
-    ui::Button* stageSelectButton[1] =
+    cocos2d::ui::Button* stageSelectButton[1] =
     {
-        ui::Button::create("ImageFile/IconBg.png"),
+        cocos2d::ui::Button::create("ImageFile/IconBg.png"),
     };
     
     Size winSize = Director::getInstance()->getWinSize();
     
     void CreateMenuWindow();
     void touchEvent(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
-    void SetSelectUnable(ui::Button* button);
-    void SetSelectDisable(ui::Button* button);
+    void SetSelectUnable(cocos2d::ui::Button* button);
+    void SetSelectDisable(cocos2d::ui::Button* button);
     
 public:
     
