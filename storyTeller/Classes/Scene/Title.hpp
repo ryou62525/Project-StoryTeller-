@@ -17,10 +17,13 @@ using namespace experimental;
 class Title : public cocos2d::Layer
 {
 private:
-    
-    Sprite* sprite;
+
+    bool changeScene = false;
     int titleBgm;
     int se;
+    float volume = 1;
+    
+    Sprite* sprite;
     DelayTime* delay;
 
 public:
@@ -33,8 +36,9 @@ public:
     void SetBlink(float blinkSpeed);
     void SetBgm();
     
-    CREATE_FUNC(Title)
+    bool IsSoundless();
     
+    CREATE_FUNC(Title)
 };
 
 #endif /* Title_hpp */

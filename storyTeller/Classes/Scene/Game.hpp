@@ -16,7 +16,6 @@ class Game : public cocos2d::Layer
 {
 private:
     
-    int pos;
     ActionCamera* camera;
     Sprite3D* stage;
     Size visibleSize = Director::getInstance()->getVisibleSize();
@@ -26,6 +25,7 @@ public:
     static Scene* CreateScene();
     bool init();
     void update(float deltaTime);
+    
     CREATE_FUNC(Game)
 };
 

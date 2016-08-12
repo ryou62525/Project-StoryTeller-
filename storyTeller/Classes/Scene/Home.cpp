@@ -9,11 +9,8 @@
 
 #include "Home.hpp"
 #include "Game.hpp"
-
-#include "../../cocos2d/external/tinyxml2/tinyxml2.h"   //xmlファイルを読み込む機能の追加
-#include "../../cocos2d/external/json/rapidjson.h"      //jsonファイルを読み込む機能の追加
-
 #include <fstream>
+USING_NS_CC;
 
 Scene* Home::CreateScene()
 {
@@ -28,6 +25,7 @@ bool Home::init()
 {
     if(!Layer::init()){ return false; }
     
+
     CreateMenuWindow();
     
     return true;
@@ -41,6 +39,26 @@ void Home::update(float deltaTime)
 void Home::CreateMenuWindow()
 {
     //背景設定---------------------------------------------------------------------------------------------------
+//    auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/TitleImagePath.txt");
+//    std::ifstream inFile(filePath);
+//    assert(inFile);
+//    
+//    size_t imageValue;
+//    std::string _filePath;
+//    Vec2 pos, size;
+//    
+//    inFile >> imageValue;
+//    Sprite* background[imageValue];
+//    
+//    for(int i = 0; i < imageValue; i++)
+//    {
+//        inFile >> _filePath >> pos.x >> pos.y >> size.x >> size.y;
+//        background[i] = Sprite::create(_filePath);
+//        background[i]->setPosition(Vec2(pos.x, pos.y));
+//        background[i]->setScale(size.x, size.y);
+//        this->addChild(background[i]);
+//    }
+
     background[0]->setPosition(960,555);
     background[0]->setScale(1, 1);
     addChild(background[0],z_HomeBg);

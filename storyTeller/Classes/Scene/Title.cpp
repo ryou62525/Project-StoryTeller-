@@ -31,28 +31,30 @@ bool Title::init()
         sprite->setPosition(Vec2(960,200));
         sprite->setScale(0.4,0.4);
         this->addChild(sprite);
+        this->scheduleUpdate();
         
         SetBgm();
         SetBlink(2);
     }
+    
+    //Scene* nextScene = Home::CreateScene();
         
     //イベントリスナーの生成
     auto listener = EventListenerTouchOneByOne::create();
     listener->onTouchBegan = [this](Touch* touch, Event* event)
     {
         this->getEventDispatcher()->removeAllEventListeners();
-       
-        se = AudioEngine::play2d("Sound/SE/TouchToButton.wav");
-        delay = DelayTime::create(2);
         SetBlink(0.1);
+        changeScene = true;
+        se = AudioEngine::play2d("Sound/SE/TouchToButton.wav");
+        delay = DelayTime::create(3.5);
         
         auto startGame = CallFunc::create([]
         {
-            Scene* scene = Home::CreateScene();
-            TransitionFade* trasition = TransitionFade::create(1, scene);
+            TransitionFade* trasition = TransitionFade::create(1.5, Home::CreateScene());
             Director::getInstance()->replaceScene(trasition);
         });
-        
+       
         this->runAction(Sequence::create(delay, startGame, NULL));
         return true;
     };
@@ -92,7 +94,6 @@ void Title::SetImageInfo()
 void Title::SetBlink(float blinkSpeed)
 {
     auto blink = Sequence::create(FadeTo::create(blinkSpeed, 60),FadeTo::create(blinkSpeed, 255), NULL);
-     this->scheduleUpdate();
     sprite->runAction(RepeatForever::create(blink));
 }
 
@@ -101,9 +102,26 @@ void Title::SetBgm()
 {
     titleBgm = AudioEngine::play2d("Sound/BGM/title_bgm.wav");
     AudioEngine::setLoop(titleBgm, true);
+    
 }
 
 void Title::update(float deltaTime)
 {
-    CCLOG("ボタンが押されました");
+    if(changeScene)
+    {
+        volume -= 0.01;
+        AudioEngine::setVolume(titleBgm, volume);
+    }
+    
+    if(IsSoundless())
+    {
+        AudioEngine::stop(titleBgm);
+        CCLOG("サウンドは停止しました");
+    }
+}
+
+bool Title::IsSoundless()
+{
+    if(volume <=0 )return true;
+    else return false;
 }
