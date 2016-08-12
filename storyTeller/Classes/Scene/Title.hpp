@@ -11,7 +11,9 @@
 
 #include <cocos2d.h>
 #include "../../cocos2d/cocos/audio/include/AudioEngine.h"
+
 USING_NS_CC;
+using namespace cocos2d::ui;
 using namespace experimental;
 
 class Title : public cocos2d::Layer

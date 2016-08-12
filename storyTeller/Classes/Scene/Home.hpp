@@ -12,11 +12,10 @@
 
 #include <cocos2d.h>
 #include <ui/CocosGUI.h>
-//#include "../../cocos2d/external/tinyxml2/tinyxml2.h"       //xmlファイルを読み込む機能の追加
-//#include "../../cocos2d/external/json/rapidjson.h"          //jsonファイルを読み込む機能の追加
 #include "../../cocos2d/cocos/audio/include/AudioEngine.h"  //サウンドファイルを読み込む機能の追
 
 USING_NS_CC;
+using namespace cocos2d::ui;
 
 class Home : public cocos2d::Layer
 {
@@ -31,44 +30,22 @@ private:
         t_Character,
     };
     
-    enum ZOder
+    enum
     {
-        z_Quest = 1,
-        z_Option,
-        z_HomeBg,
-        z_Icon,
-        z_Character,
+        BG_IMAGE_VALUE = 4,
+        UI_IMAGE_VALUE = 3,
+        STAGE_UI_IMAGE_VALUE = 1,
     };
-    
-    //背景の作成
-    Sprite* background[4] =
-    {
-        Sprite::create("ImageFile/Menubg.png"),
-        Sprite::create("ImageFile/kawabe.png"),
-        Sprite::create("ImageFile/Menu.png"),
-        Sprite::create("ImageFile/IconBg.png"),
-    };
-    
-    //ボタンの作成
-    cocos2d::ui::Button* button[3] =
-    {
-        cocos2d::ui::Button::create("ImageFile/UIHome.png"),
-        cocos2d::ui::Button::create("ImageFile/UIQuest.png"),
-        cocos2d::ui::Button::create("ImageFile/UIOption.png"),
-    };
-    
-    cocos2d::ui::Button* stageSelectButton[1] =
-    {
-        cocos2d::ui::Button::create("ImageFile/IconBg.png"),
-    };
-    
+
+    Sprite* background[BG_IMAGE_VALUE];
+    Button* button[UI_IMAGE_VALUE];
+    Button* stageSelectButton[STAGE_UI_IMAGE_VALUE];
     Size winSize = Director::getInstance()->getWinSize();
     
     void CreateMenuWindow();
-    void touchEvent(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
-    void SetSelectUnable(cocos2d::ui::Button* button);
-    void SetSelectDisable(cocos2d::ui::Button* button);
-    
+    void touchEvent(Ref *pSender, Widget::TouchEventType type);
+    void SetSelectUnable(Button* button);
+    void SetSelectDisable(Button* button);
     int menuBgm = experimental::AudioEngine::play2d("Sound/BGM/menu_bgm.wav");
     
 public:
