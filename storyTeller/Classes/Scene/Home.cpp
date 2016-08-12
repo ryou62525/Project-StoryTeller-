@@ -25,13 +25,8 @@ bool Home::init()
 {
     if(!Layer::init()){ return false; }
     
-    menuSerect = MenuSerect::HOME;
-    sprite2 = Sprite::create("ImageFile/Menubg.png");
-    sprite2->setPosition(960, 550);
-    this->addChild(sprite2);
 
-    SetBgImage();
-    SetUiImage();
+    CreateMenuWindow();
     
     return true;
 }
@@ -41,80 +36,116 @@ void Home::update(float deltaTime)
     
 }
 
-void Home::SetBgImage()
+void Home::CreateMenuWindow()
 {
-    auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeImagePath.txt");
-    std::ifstream inFile(filePath);
-    assert(inFile);
+    //背景設定---------------------------------------------------------------------------------------------------
+//    auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/TitleImagePath.txt");
+//    std::ifstream inFile(filePath);
+//    assert(inFile);
+//    
+//    size_t imageValue;
+//    std::string _filePath;
+//    Vec2 pos, size;
+//    
+//    inFile >> imageValue;
+//    Sprite* background[imageValue];
+//    
+//    for(int i = 0; i < imageValue; i++)
+//    {
+//        inFile >> _filePath >> pos.x >> pos.y >> size.x >> size.y;
+//        background[i] = Sprite::create(_filePath);
+//        background[i]->setPosition(Vec2(pos.x, pos.y));
+//        background[i]->setScale(size.x, size.y);
+//        this->addChild(background[i]);
+//    }
+
+    background[0]->setPosition(960,555);
+    background[0]->setScale(1, 1);
+    addChild(background[0],z_HomeBg);
     
-    size_t imageValue;
-    std::string _imagePath;
-    Vec2 pos, size;
-
-    inFile >> imageValue;
-
-    Sprite* bgSprite[imageValue];
-    for(int i = 0; i < imageValue; i++)
-    {
-        inFile >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
-        
-        bgSprite[i] = Sprite::create(_imagePath);
-        bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
-        bgSprite[i]->setScale(size.x, size.y);
-        this->addChild(bgSprite[i]);
-    }
+    background[1]->setPosition(winSize.width/2.1, winSize.height/2);
+    background[1]->setScale(0.5, 0.5);
+    addChild(background[1],z_Quest);
+    
+    background[2]->setPosition(winSize.width/6, winSize.height/1.2);
+    background[2]->setScale(0.2, 0.2);
+    addChild(background[2], z_HomeBg);
+    
+    background[3]->setPosition(winSize.width/2, 100);
+    addChild(background[3], 4);
+    
+    //ボタン設定-------------------------------------------------------------------------------------------------
+    button[0]->setPosition(Vec2(150, 120));
+    button[1]->setPosition(Vec2(400, 120));
+    button[2]->setPosition(Vec2(650, 120));
+    
+    button[0]->setScale(0.15, 0.15);
+    button[1]->setScale(0.15, 0.15);
+    button[2]->setScale(0.15, 0.15);
+    
+    addChild(button[0],z_Icon);
+    addChild(button[1],z_Icon);
+    addChild(button[2],z_Icon);
+    
+    //ステージ選択ボタン------------------------------------------------------------------------------------------
+    stageSelectButton[0]->cocos2d::Node::setPosition(900, 500);
+    stageSelectButton[0]->setScale(0.3,0.5);
+    stageSelectButton[0]->setTitleText("不思議の国のアリス");
+    stageSelectButton[0]->setTitleFontSize(256);
+    stageSelectButton[0]->setTitleColor(Color3B::WHITE);
+    stageSelectButton[0]->setEnabled(false);
+    addChild(stageSelectButton[0],z_Quest);
+    
+    //ボタンのタッチイベント---------------------------------------------------------------------------------------
+    button[0]->addTouchEventListener([this](Ref *pSender, cocos2d::ui::Widget::TouchEventType type)
+                                     {
+                                         if(type == ui::Widget::TouchEventType::BEGAN)
+                                         {
+                                             this->reorderChild(background[0], 3);
+                                             this->reorderChild(background[2], 3);
+                                             SetSelectUnable(stageSelectButton[0]);
+                                         }
+                                     });
+    
+    button[1]->addTouchEventListener([this](Ref *pSender, cocos2d::ui::Widget::TouchEventType type)
+                                     {
+                                         if(type == ui::Widget::TouchEventType::BEGAN)
+                                         {
+                                             this->reorderChild(background[1], 3);
+                                             this->reorderChild(stageSelectButton[0], 3);
+                                             SetSelectDisable(stageSelectButton[0]);
+                                         }
+                                     });
+    
+    button[2]->addTouchEventListener([this](Ref *pSender, cocos2d::ui::Widget::TouchEventType type)
+                                     {
+                                         if(type == ui::Widget::TouchEventType::BEGAN)
+                                         {
+                                             this->reorderChild(background[0], 3);
+                                             this->reorderChild(background[2], 3);
+                                             SetSelectUnable(stageSelectButton[0]);
+                                         }
+                                     });
+    
+    stageSelectButton[0]->addTouchEventListener([this](Ref *pSender, cocos2d::ui::Widget::TouchEventType type)
+                                     {
+                                         auto gameScene=Game::CreateScene();
+                                         Scene* transition;
+                                         if(type == ui::Widget::TouchEventType::BEGAN)
+                                         {
+                                             transition = TransitionFade::create(1.0f, gameScene);
+                                         }
+                                         Director::getInstance()->replaceScene(transition);
+                                     });
+    
 }
 
-void Home::SetUiImage()
+void Home::SetSelectUnable(ui::Button* button)
 {
-    auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeUIImage.txt");
-    std::ifstream inFile(filePath);
-    assert(inFile);
-    
-    size_t imageValue;
-    std::string _imagePath;
-    Vec2 pos, size;
-    
-    inFile >> imageValue;
-    
-    ui::Button* button[imageValue];
-    for(int i = 0; i < imageValue; i++)
-    {
-        inFile >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
-
-        button[i] = ui::Button::create(_imagePath);
-        button[i]->setPosition(Vec2(pos.x, pos.y));
-        button[i]->setScale(size.x, size.y);
-        this->addChild(button[i]);
-        button[i]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
-   
-    }
-    button[1]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
+    button->setEnabled(false);
 }
 
-void Home::SetQuestMenu()
+void Home::SetSelectDisable(ui::Button* button)
 {
-    auto sprite = Sprite::create("ImageFile/kawabe.png");
-    sprite->setPosition(1000, 600);
-    sprite->setScale(0.5, 0.5);
-    this->addChild(sprite);
-}
-
-void Home::touchEvent(Ref *pSender, ui::Widget::TouchEventType type)
-{
-    
-    Scene* nextScene = Home::CreateScene();
-    
-    Scene* transition;
-    
-    switch (type) {
-        case ui::Widget::TouchEventType::BEGAN:
-            
-            transition = TransitionFade::create(1.0f, nextScene);
-            
-            break;
-            
-        default:
-            break;
-    }
+    button->setEnabled(true);
 }

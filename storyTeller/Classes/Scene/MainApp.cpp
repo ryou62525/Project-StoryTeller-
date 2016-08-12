@@ -15,7 +15,7 @@
 Scene* MainApp::CreateScene()
 {
     Scene* scene = Scene::create();
-    Layer* layer = Home::create();
+    Layer* layer = Title::create();
     scene->addChild(layer);
     return scene;
 }
@@ -24,9 +24,4 @@ bool MainApp::init()
 {
     if(!Layer::init()){return false;}
     return true;
-}
-
-void MainApp::update(float delta)
-{
-    
 }

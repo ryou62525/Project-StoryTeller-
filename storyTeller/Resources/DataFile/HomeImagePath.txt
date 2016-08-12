@@ -1,7 +1,6 @@
-2
-ImageFile/IconBg.png
+ImageFile/Menubg.png
 960
-130
+550
 0.8
 0.8
 ImageFile/Menu.png

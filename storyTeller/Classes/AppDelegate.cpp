@@ -3,7 +3,6 @@
 #include "Scene/Home.hpp"
 #include "Scene/MainApp.hpp"
 #include "Scene/Game.hpp"
-#include "HelloWorldScene.h"
 
 USING_NS_CC;
 
@@ -47,12 +46,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     director->setAnimationInterval(1.0 / 60);
     
     glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
-
-    // run
-    glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
     
     // create a scene. it's an autorelease object
-    Scene* scene = HelloWorld::createScene();
+    Scene* scene = MainApp::CreateScene();
 
     director->runWithScene(scene);
     
