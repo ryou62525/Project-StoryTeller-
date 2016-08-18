@@ -16,6 +16,7 @@
 
 USING_NS_CC;
 using namespace cocos2d::ui;
+using namespace experimental;
 
 class Home : public cocos2d::Layer
 {
@@ -33,20 +34,54 @@ private:
     enum
     {
         BG_IMAGE_VALUE = 4,
-        UI_IMAGE_VALUE = 3,
-        STAGE_UI_IMAGE_VALUE = 1,
+        STAGE_UI_IMAGE_VALUE = 4,
+        MENU_UI_VALUE = 9,
     };
-
+    
+    enum class UI_IMAGE
+    {
+        HOME = 0,
+        QUEST,
+        DICTIONARY,
+        OPTION,
+        
+        MAX
+    };
+    
+    enum class OPTION_LABEL
+    {
+        BGM = 0,
+        SE,
+        M_SPEED,
+        
+        MAX = 9
+    };
+    
+    enum class STAGE_SELECT
+    {
+        ALICE = 0,
+        
+        MAX = 4
+    };
+    
+    ListView* menuList = ListView::create();
+    PageView* pageView = PageView::create();
     Sprite* background[BG_IMAGE_VALUE];
-    Button* button[UI_IMAGE_VALUE];
-    Button* stageSelectButton[STAGE_UI_IMAGE_VALUE];
+    Button* button[(int)UI_IMAGE::MAX];
+    Button* stageSelectButton[(int)STAGE_SELECT::MAX];
     Size winSize = Director::getInstance()->getWinSize();
     
     void CreateMenuWindow();
+    void CreateOptionWindow();
+    void CreateQuestWindow();
+    
+    
     void touchEvent(Ref *pSender, Widget::TouchEventType type);
+    void ChangePageMoveIn(PageView* _pageView);
+    void ChangePageMoveOut(PageView* _pageView);
     void SetSelectUnable(Button* button);
     void SetSelectDisable(Button* button);
-    int menuBgm = experimental::AudioEngine::play2d("Sound/BGM/menu_bgm.wav");
+    void SetBgm();
     
 public:
     

@@ -37,14 +37,14 @@ bool Title::init()
     
     //Scene* nextScene = Home::CreateScene();
         
-    //イベントリスナーの生成
+    //画面タッチ時イベント処理
     auto listener = EventListenerTouchOneByOne::create();
     listener->onTouchBegan = [this](Touch* touch, Event* event)
     {
         this->getEventDispatcher()->removeAllEventListeners();
         SetBlink(0.1);
         changeScene = true;
-        se = AudioEngine::play2d("Sound/SE/TouchToButton.wav");
+        se = AudioEngine::play2d("Sound/SE/TouchToStart.wav");
         delay = DelayTime::create(3.5);
         
         auto startGame = CallFunc::create([]
@@ -114,7 +114,6 @@ void Title::update(float deltaTime)
     if(IsSoundless())
     {
         AudioEngine::stop(titleBgm);
-        CCLOG("サウンドは停止しました");
     }
 }
 
