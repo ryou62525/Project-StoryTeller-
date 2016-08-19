@@ -2,7 +2,7 @@
 //  Test.hpp
 //  storyTeller
 //
-//  Created by vantan on 2016/08/15.
+//  Created by vantan on 2016/08/18.
 //
 //
 
@@ -14,14 +14,15 @@ USING_NS_CC;
 
 class Test : public cocos2d::Layer
 {
-    Camera* camera;
-    
-
 public:
-    static cocos2d::Scene* CreateScene();
+
+    Camera* camera;
+    static Scene* CreateScene();
     bool init();
+    
     void update(float deltaTime);
     CREATE_FUNC(Test)
+    
 };
 
 #endif /* Test_hpp */

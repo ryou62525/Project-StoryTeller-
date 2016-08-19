@@ -28,7 +28,7 @@ bool Home::init()
 
     CreateMenuWindow();
     CreateOptionWindow();
-    CreateQuestWindow();
+    CreateStageSelectWindow();
     SetBgm();
     
     return true;
@@ -227,7 +227,7 @@ void Home::CreateOptionWindow()
 }
 
 //クエストメニューウィンドウ及びタッチイベントの生成
-void Home::CreateQuestWindow()
+void Home::CreateStageSelectWindow()
 {
     pageView->setContentSize(Size(winSize.width,320));
     pageView->setPosition((winSize-pageView->getContentSize())/2);
@@ -294,6 +294,10 @@ void Home::ChangePageMoveOut(PageView* _pageView)
     _pageView->runAction(easeAction);
 }
 
+void CreatePageViewList(std::string _filePath)
+{
+    
+}
 
 void Home::SetSelectUnable(Button* button)
 {

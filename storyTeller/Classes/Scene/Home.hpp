@@ -13,6 +13,7 @@
 #include <cocos2d.h>
 #include <ui/CocosGUI.h>
 #include "../../cocos2d/cocos/audio/include/AudioEngine.h"  //サウンドファイルを読み込む機能の追
+#include <string.h>
 
 USING_NS_CC;
 using namespace cocos2d::ui;
@@ -73,8 +74,8 @@ private:
     
     void CreateMenuWindow();
     void CreateOptionWindow();
-    void CreateQuestWindow();
-    
+    void CreateStageSelectWindow();
+    void CreatePageViewList(std::string _filePath);
     
     void touchEvent(Ref *pSender, Widget::TouchEventType type);
     void ChangePageMoveIn(PageView* _pageView);
