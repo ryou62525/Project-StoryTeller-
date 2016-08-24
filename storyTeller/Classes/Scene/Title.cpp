@@ -11,8 +11,6 @@
 #include "Result.hpp"
 #include <fstream>
 
-#include <fstream>
-
 Scene* Title::CreateScene()
 {
     Scene* scene = Scene::create();
@@ -25,30 +23,41 @@ bool Title::init()
 {
     if(!Layer::init()){return  false;}
     
-    SetImageInfo();
- 
-    //イベントリスナーの生成
+    {
+        SetImageInfo();
+        sprite = Sprite::create("ImageFile/TapEventImage.png");
+        sprite->setPosition(Vec2(960,200));
+        sprite->setScale(0.4,0.4);
+        this->addChild(sprite);
+        this->scheduleUpdate();
+        
+        SetBgm();
+        SetBlink(2);
+    }
+    
+    //Scene* nextScene = Home::CreateScene();
+        
+    //画面タッチ時イベント処理
     auto listener = EventListenerTouchOneByOne::create();
-    //listener->setSwallowTouches(true);
     listener->onTouchBegan = [this](Touch* touch, Event* event)
     {
         this->getEventDispatcher()->removeAllEventListeners();
-        auto delay = DelayTime::create(2);
+        SetBlink(0.1);
+        changeScene = true;
+        se = AudioEngine::play2d("Sound/SE/TouchToStart.wav");
+        delay = DelayTime::create(3.5);
         
         auto startGame = CallFunc::create([]
         {
-            Scene* scene = Home::CreateScene();
-            auto trasition = TransitionFade::create(1, scene);
+            TransitionFade* trasition = TransitionFade::create(1.5, Home::CreateScene());
             Director::getInstance()->replaceScene(trasition);
         });
-        
+       
         this->runAction(Sequence::create(delay, startGame, NULL));
-        
         return true;
     };
     
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
-    
     return true;
 }
 
@@ -65,7 +74,6 @@ void Title::SetImageInfo()
     
     inFile >> imageValue;
     Sprite* bgSprite[imageValue];
-    auto blink = Sequence::create(FadeTo::create(0.5, 60),FadeTo::create(0.5, 255), NULL);
     
     for(int i = 0; i < imageValue; i++)
     {
@@ -77,14 +85,40 @@ void Title::SetImageInfo()
         bgSprite[i] = Sprite::create(_filePath);
         bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
         bgSprite[i]->setScale(size.x, size.y);
-        
-        if(i == 1)
-        {
-            bgSprite[1]->runAction(RepeatForever::create(blink));
-        }
-        
         this->addChild(bgSprite[i]);
     }
+}
+
+void Title::SetBlink(float blinkSpeed)
+{
+    auto blink = Sequence::create(FadeTo::create(blinkSpeed, 60),FadeTo::create(blinkSpeed, 255), NULL);
+    sprite->runAction(RepeatForever::create(blink));
+}
+
+//BGMの設定
+void Title::SetBgm()
+{
+    titleBgm = AudioEngine::play2d("Sound/BGM/title_bgm.wav");
+    AudioEngine::setLoop(titleBgm, true);
     
-    CCLOG("%f", bgSprite[0]->getPosition().x);
+}
+
+void Title::update(float deltaTime)
+{
+    if(changeScene)
+    {
+        volume -= 0.01;
+        AudioEngine::setVolume(titleBgm, volume);
+    }
+    
+    if(IsSoundless())
+    {
+        AudioEngine::stop(titleBgm);
+    }
+}
+
+bool Title::IsSoundless()
+{
+    if(volume <=0 )return true;
+    else return false;
 }

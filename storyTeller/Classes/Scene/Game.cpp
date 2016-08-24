@@ -18,18 +18,23 @@ Scene* Game::CreateScene()
 
 bool Game::init()
 {
-    if(!Layer::init()){return  false;}
-    
+    if(!Layer::init()){return false;}
+
+    auto layer = Layer::create();
+    {
+        stage = Sprite3D::create("FbxFile/st_stage01_floor01.c3b");
+        stage->setScale(500);
+        stage->setPosition(0,0);
+        this->addChild(stage);
+    }
+   
     this->scheduleUpdate();
+    this->addChild(layer);
     
     return true;
 }
 
 void Game::update(float deltaTime)
 {
-    Label* label = Label::create();
-    label->setPosition(500, 500);
-    label->setString("test");
-    this->addChild(label);
+    stage->setPosition3D(Vec3(visibleSize.width/2,0,1));
 }
-
