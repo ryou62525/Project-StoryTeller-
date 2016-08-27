@@ -195,7 +195,7 @@ void Home::CreateOptionWindow()
         slider[i]->loadSlidBallTextures("ImageFile/sliderThumb.png",
                                         "ImageFile/sliderThumb.png","");
         slider[i]->loadProgressBarTexture("ImageFile/sliderProgress.png");
-        slider[i]->Node::setScale(2, 2);
+        slider[i]->Node::setScale(1);
     }
     
     slider[0]->setPosition(Vec2(1225, -350));
@@ -214,8 +214,6 @@ void Home::CreateOptionWindow()
             CCLOG("Percent %f", percent/100);
         }
     });
-    //slider[0]
-    //slider[0]
     
     auto closeButton = Button::create("ImageFile/button1.png","ImageFile/button1selected.png");
     closeButton->setPosition(Vec2(winSize.width/2, -780));
@@ -243,7 +241,7 @@ void Home::CreateOptionWindow()
     
     auto layout = Layout::create();
     layout->setPosition(optionMenuList->getContentSize()/2);
-    auto imageView = ImageView::create("ImageFile/kuro.png");         //メニュー用の画像きたら貼り替え、スケールも変更
+    auto imageView = ImageView::create("ImageFile/option_window.png");         //メニュー用の画像きたら貼り替え、スケールも変更
     imageView->setPosition(Vec2(winSize.width/2,-winSize.height/2));
     imageView->setScale(0.6, 0.55);
     layout->addChild(imageView);
