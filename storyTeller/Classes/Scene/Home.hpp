@@ -12,8 +12,10 @@
 
 #include <cocos2d.h>
 #include <ui/CocosGUI.h>
-#include "../../cocos2d/cocos/audio/include/AudioEngine.h"  //サウンドファイルを読み込む機能の追
 #include <string.h>
+
+#include "../../cocos2d/cocos/audio/include/AudioEngine.h"  //サウンドファイルを読み込む機能の追
+#include "ResDataBase.h"
 
 USING_NS_CC;
 using namespace cocos2d::ui;
@@ -22,67 +24,34 @@ using namespace experimental;
 class Home : public cocos2d::Layer
 {
 private:
-  
-    enum Tag
-    {
-        t_Quest = 1,
-        t_Option,
-        t_HomeBg,
-        t_Icon,
-        t_Character,
-    };
     
-    enum
-    {
-        BG_IMAGE_VALUE = 4,
-        STAGE_UI_IMAGE_VALUE = 4,
-        MENU_UI_VALUE = 9,
-    };
+    float percent = 50;
+    int menuBgm;
     
-    enum class UI_IMAGE
-    {
-        HOME = 0,
-        QUEST,
-        DICTIONARY,
-        OPTION,
-        
-        MAX
-    };
+    Size winSize;
+    ListView* optionMenuList;
+    UserDefault* user;
     
-    enum class OPTION_LABEL
-    {
-        BGM = 0,
-        SE,
-        M_SPEED,
-        
-        MAX = 9
-    };
-    
-    enum class STAGE_SELECT
-    {
-        ALICE = 0,
-        
-        MAX = 4
-    };
-    
-    ListView* menuList = ListView::create();
-    PageView* pageView = PageView::create();
+    PageView* pageView[(int)PAGE::MAX];
     Sprite* background[BG_IMAGE_VALUE];
     Button* button[(int)UI_IMAGE::MAX];
-    Button* stageSelectButton[(int)STAGE_SELECT::MAX];
-    Size winSize = Director::getInstance()->getWinSize();
+    
+    Button* storySelectButton[(int)STORY_SELECT::MAX];
+    Button* stage1SelectButton[3];
     
     void CreateMenuWindow();
     void CreateOptionWindow();
-    void CreateStageSelectWindow();
-    void CreatePageViewList(std::string _filePath);
+    void CreatePageViewList(const std::string _filePath, PageView* _pageView, Button* _button[], const int ButtonNum, Vec2 initPos = Vec2(0, 380));
+    
+    void StorySelectedProcessingImplementation();
+    void StageSelectedProcessingImplementation();
     
     void touchEvent(Ref *pSender, Widget::TouchEventType type);
     void ChangePageMoveIn(PageView* _pageView);
     void ChangePageMoveOut(PageView* _pageView);
     void SetSelectUnable(Button* button);
     void SetSelectDisable(Button* button);
-    void SetBgm();
+    void SetBgm(const std::string _filePath, bool _enable);
     
 public:
     
