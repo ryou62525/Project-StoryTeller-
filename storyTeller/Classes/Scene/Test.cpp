@@ -7,7 +7,10 @@
 //
 
 #include "Test.hpp"
+#include "../Utility/GameUtilis.hpp"
+#include "../Utility/GameOption.hpp"
 USING_NS_CC;
+using namespace cocos2d::ui;
 
 Scene* Test::CreateScene()
 {
@@ -25,62 +28,60 @@ bool Test::init()
     auto layer = Layer::create();
     
     scheduleUpdate();
+    
+    Layer* optionLayer = Layer::create();
+    GameOption option(optionLayer);
+    option.CreateOption();
+    addChild(optionLayer,1);
 
-//    rect = Sprite::create();
-//    rect->setPosition(Vec2(winSize.width * 0.3, winSize.height/2));
-//    rect->setTextureRect(Rect(0,0,200,200));
-//    rect->setColor(Color3B(255,0,0));
-//    this->addChild(rect);
-//    
-//    Vector<FiniteTimeAction*> actions;
-//    actions.pushBack(MoveTo::create(2.0f, Vec2(winSize.width/2, winSize.height/2)));
-//    actions.pushBack(MoveTo::create(2.0f, Vec2(winSize.width * 0.3, winSize.height/2)));
-//    
-//    auto sequence = Sequence::create(actions);
-//    auto repeat = RepeatForever::create(sequence);
-//    rect->runAction(repeat);
-//    
-//    auto button = ui::Button::create("ImageFile/UIOption.png");
-//    button->setPosition(Vec2(200,100));
-//    button->setScale(0.1);
-//    addChild(button);
-//    
-//    CocosDenshion::SimpleAudioEngine::getInstance()->preloadBackgroundMusic("Sound/BGM/menu_bgm.wav");
-//    CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("Sound/BGM/menu_bgm.wav", true);
-//    
-//    button->addTouchEventListener([this](Ref *pSender, ui::Widget::TouchEventType type)
-//    {
-//        if(type == ui::Widget::TouchEventType::ENDED)
-//        {
-//            if(_pause)
-//            {
-//                this->resume();
-//                Director::getInstance()->startAnimation();
-//                CocosDenshion::SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
-//            }
-//            else
-//            {
-//                this->pause();
-//                Director::getInstance()->stopAnimation();
-//                CocosDenshion::SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
-//            }
-//            
-//            _pause = !_pause;
-//            
-//        }
-//    });
+
+    
+    auto listView = ListView::create();
+    listView->setContentSize(Size(240,320));
+    listView->setPosition(Vec2(100,500));
+    this->addChild(listView);
+    
+    for(int i = 0; i < 6; i++)
+    {
+        button[i] = Button::create("ImageFile/button1.png");
+        button[i]->setContentSize(Size(300,120));
+        button[i]->setPosition(button[i]->getContentSize()/2);
+        
+        auto layout = Layout::create();
+        layout->setContentSize(button[i]->getContentSize());
+        layout->addChild(button[i]);
+        listView->addChild(layout);
+    }
+    
+    auto sprite = Sprite::create("ImageFile/Menubg.png");
+    sprite->setPosition(winSize/2);
+    addChild(sprite,2);
+    
+    
+    Layer* testLayer = Layer::create();
+    SetUI(testLayer, testButton, Vec2(winSize.width/2, winSize.height/2), Vec2(0.1,0.1));
+    addChild(testLayer,4);
+    
+//    testButton->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type)
+//                                      {
+//                                          if(type == Widget::TouchEventType::ENDED)
+//                                          {
+//                                              this->reorderChild(optionLayer, 3);
+//                                              option.SetEnable();
+//                                          }
+//                                      });
     
     {
-        sprite->setPosition3D(Vec3(0,0,30));
-        sprite->setScaleX(1);
-        layer->addChild(sprite);
+//        sprite->setPosition3D(Vec3(0,0,-30));
+//        //sprite->setScaleX(1);
+//        layer->addChild(sprite);
     }
     
     {
-        camera = Camera::createPerspective(61, (GLfloat)winSize.width/winSize.height, 1, 10000);
+        camera = Camera::createPerspective(60, (GLfloat)winSize.width/winSize.height, 1, 1000);
         camera->setCameraFlag(CameraFlag::USER1);
-        camera->lookAt(sprite->getPosition3D());
-        camera->setPosition3D(Vec3(0,20,10));
+        camera->lookAt(Vec3(0,0,0));
+        camera->setPosition3D(Vec3(0,0,10));
         camera->setRotation3D(Vec3(0,0,0));
         layer->addChild(camera);
         layer->setCameraMask((unsigned short)CameraFlag::USER1);
@@ -94,4 +95,49 @@ void Test::update(float deltaTime)
 {
 //    auto user = UserDefault::getInstance();
 //    CCLOG("%f", user->getFloatForKey("bgmVolume"));
+}
+
+void Test::Transform()
+{
+    button[0]->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type){
+        
+        cameraPos.x += 1;
+        camera->setRotation3D(cameraPos);
+        
+    });
+    
+    button[1]->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type){
+        
+        cameraPos.x -= 1;
+        camera->setRotation3D(cameraPos);
+        
+    });
+    
+    button[2]->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type){
+        
+        cameraPos.y += 1;
+        camera->setRotation3D(cameraPos);
+        
+    });
+    
+    button[3]->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type){
+        
+        cameraPos.y -= 1;
+        camera->setRotation3D(cameraPos);
+        
+    });
+    
+    button[4]->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type){
+        
+        cameraPos.z += 1;
+        camera->setRotation3D(cameraPos);
+        
+    });
+    
+    button[5]->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type){
+        
+        cameraPos.z -= 1;
+        camera->setRotation3D(cameraPos);
+        
+    });
 }
