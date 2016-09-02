@@ -21,6 +21,7 @@ bool Game::init()
     if(!Layer::init()){return false;}
 
     auto layer = Layer::create();
+   
     {
         stage = Sprite3D::create("FbxFile/st_stage01_floor01.c3b");
         stage->setScale(500);

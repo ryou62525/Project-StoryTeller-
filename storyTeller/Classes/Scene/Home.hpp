@@ -12,64 +12,46 @@
 
 #include <cocos2d.h>
 #include <ui/CocosGUI.h>
-//#include "../../cocos2d/external/tinyxml2/tinyxml2.h"       //xmlファイルを読み込む機能の追加
-//#include "../../cocos2d/external/json/rapidjson.h"          //jsonファイルを読み込む機能の追加
+#include <string.h>
+
 #include "../../cocos2d/cocos/audio/include/AudioEngine.h"  //サウンドファイルを読み込む機能の追
+#include "ResDataBase.h"
 
 USING_NS_CC;
+using namespace cocos2d::ui;
+using namespace experimental;
 
 class Home : public cocos2d::Layer
 {
 private:
-  
-    enum Tag
-    {
-        t_Quest = 1,
-        t_Option,
-        t_HomeBg,
-        t_Icon,
-        t_Character,
-    };
     
-    enum ZOder
-    {
-        z_Quest = 1,
-        z_Option,
-        z_HomeBg,
-        z_Icon,
-        z_Character,
-    };
+    float percent = 50;
+    int menuBgm;
     
-    //背景の作成
-    Sprite* background[4] =
-    {
-        Sprite::create("ImageFile/Menubg.png"),
-        Sprite::create("ImageFile/kawabe.png"),
-        Sprite::create("ImageFile/Menu.png"),
-        Sprite::create("ImageFile/IconBg.png"),
-    };
+    Size winSize;
+    ListView* optionMenuList;
+    UserDefault* user;
     
-    //ボタンの作成
-    cocos2d::ui::Button* button[3] =
-    {
-        cocos2d::ui::Button::create("ImageFile/UIHome.png"),
-        cocos2d::ui::Button::create("ImageFile/UIQuest.png"),
-        cocos2d::ui::Button::create("ImageFile/UIOption.png"),
-    };
+    PageView* pageView[(int)PAGE::MAX];
+    Sprite* background[BG_IMAGE_VALUE];
+    Button* button[(int)UI_IMAGE::MAX];
     
-    cocos2d::ui::Button* stageSelectButton[1] =
-    {
-        cocos2d::ui::Button::create("ImageFile/IconBg.png"),
-    };
-    
-    Size winSize = Director::getInstance()->getWinSize();
+    Button* storySelectButton[(int)STORY_SELECT::MAX];
+    Button* stage1SelectButton[3];
     
     void CreateMenuWindow();
-    void touchEvent(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
-    void SetSelectUnable(cocos2d::ui::Button* button);
-    void SetSelectDisable(cocos2d::ui::Button* button);
+    void CreateOptionWindow();
+    void CreatePageViewList(const std::string _filePath, PageView* _pageView, Button* _button[], const int ButtonNum, Vec2 initPos = Vec2(0, 380));
     
-    int menuBgm = experimental::AudioEngine::play2d("Sound/BGM/menu_bgm.wav");
+    void StorySelectedProcessingImplementation();
+    void StageSelectedProcessingImplementation();
+    
+    void touchEvent(Ref *pSender, Widget::TouchEventType type);
+    void ChangePageMoveIn(PageView* _pageView);
+    void ChangePageMoveOut(PageView* _pageView);
+    void SetSelectUnable(Button* button);
+    void SetSelectDisable(Button* button);
+    void SetBgm(const std::string _filePath, bool _enable);
     
 public:
     
