@@ -29,51 +29,18 @@ bool Test::init()
     
     scheduleUpdate();
     
-    Layer* optionLayer = Layer::create();
-    GameOption option(optionLayer);
-    option.CreateOption();
-    addChild(optionLayer,1);
-
-
-    
     auto listView = ListView::create();
     listView->setContentSize(Size(240,320));
     listView->setPosition(Vec2(100,500));
     this->addChild(listView);
-    
-    for(int i = 0; i < 6; i++)
-    {
-        button[i] = Button::create("ImageFile/button1.png");
-        button[i]->setContentSize(Size(300,120));
-        button[i]->setPosition(button[i]->getContentSize()/2);
-        
-        auto layout = Layout::create();
-        layout->setContentSize(button[i]->getContentSize());
-        layout->addChild(button[i]);
-        listView->addChild(layout);
-    }
-    
-    auto sprite = Sprite::create("ImageFile/Menubg.png");
-    sprite->setPosition(winSize/2);
-    addChild(sprite,2);
     
     
     Layer* testLayer = Layer::create();
     SetUI(testLayer, testButton, Vec2(winSize.width/2, winSize.height/2), Vec2(0.1,0.1));
     addChild(testLayer,4);
     
-//    testButton->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type)
-//                                      {
-//                                          if(type == Widget::TouchEventType::ENDED)
-//                                          {
-//                                              this->reorderChild(optionLayer, 3);
-//                                              option.SetEnable();
-//                                          }
-//                                      });
-    
     {
 //        sprite->setPosition3D(Vec3(0,0,-30));
-//        //sprite->setScaleX(1);
 //        layer->addChild(sprite);
     }
     
@@ -87,6 +54,18 @@ bool Test::init()
         layer->setCameraMask((unsigned short)CameraFlag::USER1);
     }
     addChild(layer);
+    
+    for(int i = 0; i < 6; i++)
+    {
+        button[i] = Button::create("ImageFile/button1.png");
+        button[i]->setContentSize(Size(300,120));
+        button[i]->setPosition(button[i]->getContentSize()/2);
+        
+        auto layout = Layout::create();
+        layout->setContentSize(button[i]->getContentSize());
+        layout->addChild(button[i]);
+        listView->addChild(layout);
+    }
     
     return true;
 }

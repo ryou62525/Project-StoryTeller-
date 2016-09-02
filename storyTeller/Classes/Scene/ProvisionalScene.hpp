@@ -29,6 +29,7 @@ public:
     bool init();
     void update(float deltaTime);
     CREATE_FUNC(ProvisionalScene);
+    
 };
 
 #endif /* ProvisionalScene_hpp */

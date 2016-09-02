@@ -299,6 +299,7 @@ void Home::StorySelectedProcessingImplementation()
                                                 });
 }
 
+//ゲームシーンへ移動
 void Home::StageSelectedProcessingImplementation()
 {
     stage1SelectButton[0]->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type)

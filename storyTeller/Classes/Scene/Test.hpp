@@ -26,7 +26,7 @@ private:
 public:
     
     Camera* camera;
-    Sprite3D* sprite = Sprite3D::create("FbxFile/test_tgaalpha2tex_stage01.c3b");;
+    Sprite3D* sprite = Sprite3D::create("FbxFile/test_tgaalpha2tex_stage01_sort.c3b");;
     Size winSize = Director::getInstance()->getVisibleSize();
     
     Sprite* rect;
