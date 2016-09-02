@@ -15,7 +15,7 @@
 Scene* MainApp::CreateScene()
 {
     Scene* scene = Scene::create();
-    Layer* layer = Home::create();
+    Layer* layer = Result::create();
     scene->addChild(layer);
     return scene;
 }

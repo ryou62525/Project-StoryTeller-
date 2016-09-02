@@ -15,11 +15,27 @@ USING_NS_CC;
 class Game : public cocos2d::Layer
 {
 public:
+
+    int countTimer;
+    int gameTime;
+    int gameTimeLimit;
+    
+    int gameState;
+    enum GAMESTATE{
+    
+    WAIT,
+    START,
+    END
+    
+    };
     
     static Scene* CreateScene();
     bool init();
+    void setup();
     void update(float deltaTime);
-    CREATE_FUNC(Game)
+    void gameControll();
+    void timeControll();
+    CREATE_FUNC(Game);
 };
 
 #endif /* Game_hpp */

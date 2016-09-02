@@ -17,6 +17,8 @@ Scene* Home::CreateScene()
     Scene* scene = Scene::create();
     Layer* layer = Home::create();
     
+    
+    
     scene->addChild(layer);
     return  scene;
 }
@@ -25,9 +27,27 @@ bool Home::init()
 {
     if(!Layer::init()){ return false; }
     
+    auto application = Application::getInstance();
+    auto platform = application->getTargetPlatform();
+
+    
     menuSerect = MenuSerect::HOME;
     sprite2 = Sprite::create("ImageFile/Menubg.png");
+    
+    if(platform== Application::Platform::OS_IPHONE){
+    
     sprite2->setPosition(960, 550);
+        
+    }
+    
+    if(platform== Application::Platform::OS_IPAD){
+        
+        sprite2->setPosition(1030, 850);
+        
+        
+    }
+
+    
     this->addChild(sprite2);
 
     SetBgImage();
@@ -43,43 +63,92 @@ void Home::update(float deltaTime)
 
 void Home::SetBgImage()
 {
-    auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeImagePath.txt");
-    std::ifstream inFile(filePath);
-    assert(inFile);
+    /////////////////////////////////////////////////////////////////////////
     
-    size_t imageValue;
-    std::string _imagePath;
-    Vec2 pos, size;
-
-    inFile >> imageValue;
-    Sprite* bgSprite[imageValue];
-    for(int i = 0; i < imageValue; i++)
-    {
-        inFile >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
+    auto application = Application::getInstance();
+    auto platform = application->getTargetPlatform();
+    
+    
+    if(platform== Application::Platform::OS_IPHONE){
         
-        bgSprite[i] = Sprite::create(_imagePath);
-        bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
-        bgSprite[i]->setScale(size.x, size.y);
-        this->addChild(bgSprite[i]);
+    auto filePath_iphone = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeImagePath_iphone.txt");
+        
+        std::ifstream inFile_iphone(filePath_iphone);
+        assert(inFile_iphone);
+        
+        size_t imageValue;
+        std::string _imagePath;
+        Vec2 pos, size;
+        
+        inFile_iphone >> imageValue;
+        Sprite* bgSprite[imageValue];
+        for(int i = 0; i < imageValue; i++)
+        {
+            inFile_iphone >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
+            
+            bgSprite[i] = Sprite::create(_imagePath);
+            bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
+            bgSprite[i]->setScale(size.x, size.y);
+            this->addChild(bgSprite[i]);
+        }
+
+
+        
     }
-}
+    
+    if(platform==Application::Platform::OS_IPAD){
+        
+    auto filePath_ipad = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeImagePath_Ipad.txt");
+        
+        std::ifstream inFile_ipad(filePath_ipad);
+        assert(inFile_ipad);
+        
+        size_t imageValue;
+        std::string _imagePath;
+        Vec2 pos, size;
+        
+        inFile_ipad >> imageValue;
+        Sprite* bgSprite[imageValue];
+        for(int i = 0; i < imageValue; i++)
+        {
+            inFile_ipad >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
+            
+            bgSprite[i] = Sprite::create(_imagePath);
+            bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
+            bgSprite[i]->setScale(size.x, size.y);
+            this->addChild(bgSprite[i]);
+        }
+        
+
+
+    }
+    
+
+    
+   }
 
 void Home::SetUiImage()
 {
-    auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeUIImage.txt");
-    std::ifstream inFile(filePath);
-    assert(inFile);
+    auto application = Application::getInstance();
+    auto platform = application->getTargetPlatform();
+    
+    if(platform== Application::Platform::OS_IPHONE){
+
+    
+    auto filePath_iphone = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeUIImage_iphone..txt");
+        std::ifstream inFile_iphone(filePath_iphone);
+    assert(inFile_iphone);
     
     size_t imageValue;
     std::string _imagePath;
     Vec2 pos, size;
     
-    inFile >> imageValue;
+    inFile_iphone >> imageValue;
     
     ui::Button* button[imageValue];
     for(int i = 0; i < imageValue; i++)
     {
-        inFile >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
+        inFile_iphone >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
 
         button[i] = ui::Button::create(_imagePath);
         button[i]->setPosition(Vec2(pos.x, pos.y));
@@ -88,7 +157,42 @@ void Home::SetUiImage()
         button[i]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
    
     }
+  
     button[1]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
+        
+    }
+    
+    if(platform== Application::Platform::OS_IPAD){
+        
+        
+        auto filePath_ipad = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeUIImage_ipad.txt");
+        std::ifstream inFile_ipad(filePath_ipad);
+        assert(inFile_ipad);
+        
+        size_t imageValue;
+        std::string _imagePath;
+        Vec2 pos, size;
+        
+        inFile_ipad >> imageValue;
+        
+        ui::Button* button[imageValue];
+        for(int i = 0; i < imageValue; i++)
+        {
+            inFile_ipad >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
+            
+            button[i] = ui::Button::create(_imagePath);
+            button[i]->setPosition(Vec2(pos.x, pos.y));
+            button[i]->setScale(size.x, size.y);
+            this->addChild(button[i]);
+            button[i]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
+            
+        }
+        
+        button[1]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
+        
+    }
+
+    
 }
 
 void Home::SetQuestMenu()
