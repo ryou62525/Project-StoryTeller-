@@ -18,12 +18,15 @@ class Test : public cocos2d::Layer
 {
 private:
     
+    cocos2d::ui::Button* testButton = cocos2d::ui::Button::create("ImageFile/UIHome.png");
+    Vec3 cameraPos = Vec3::ZERO;
+    cocos2d::ui::Button* button[6];
     bool _pause;
     
 public:
-
+    
     Camera* camera;
-    Sprite3D* sprite = Sprite3D::create("FbxFile/test_stage02.c3b");;
+    Sprite3D* sprite = Sprite3D::create("FbxFile/test_tgaalpha2tex_stage01.c3b");;
     Size winSize = Director::getInstance()->getVisibleSize();
     
     Sprite* rect;
@@ -32,6 +35,7 @@ public:
     static Scene* CreateScene();
     bool init();
     void update(float deltaTime);
+    void Transform();
     CREATE_FUNC(Test)
     
 };

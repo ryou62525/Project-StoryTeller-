@@ -8,6 +8,7 @@
 //
 #include "Home.hpp"
 #include "Game.hpp"
+#include "../Utility/GameUtilis.hpp"
 #include <fstream>
 
 #define ElemValue(arr) (sizeof(arr)/sizeof(arr)[0])
@@ -41,7 +42,9 @@ bool Home::init()
     SetBgm("Sound/BGM/menu_bgm.wav", true);
     
     CreateMenuWindow();
+    
     CreateOptionWindow();
+    
     StorySelectedProcessingImplementation();
     StageSelectedProcessingImplementation();
     
@@ -241,9 +244,9 @@ void Home::CreateOptionWindow()
     
     auto layout = Layout::create();
     layout->setPosition(optionMenuList->getContentSize()/2);
-    auto imageView = ImageView::create("ImageFile/option_window.png");         //メニュー用の画像きたら貼り替え、スケールも変更
+    auto imageView = ImageView::create("ImageFile/option/option_window.png");         //メニュー用の画像きたら貼り替え、スケールも変更
     imageView->setPosition(Vec2(winSize.width/2,-winSize.height/2));
-    imageView->setScale(0.6, 0.55);
+    imageView->setScale(1.5, 0.55);
     layout->addChild(imageView);
     Vec2 pos = imageView->getPosition();
     
@@ -251,27 +254,27 @@ void Home::CreateOptionWindow()
         layout->addChild(slider[i]);
     }
     
-    Label* label[9];
-    
-    for (int i = 0;i < (int)OPTION_LABEL::MAX; i++) {
-        label[i] = Label::create();
-    }
-    
-    auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeOptionUI.txt");
-    std::ifstream menuInFile(filePath);
-    assert(menuInFile);
-    
-    std::string text;
-    Vec2 _pos;
-    for(int i = 0; i < MENU_UI_VALUE; i++)
-    {
-        menuInFile >> _pos.x >> _pos.y >> text;
-        
-        label[i]->setPosition(Vec2(_pos.x, -_pos.y));
-        label[i]->setString(text);
-        label[i]->setScale(3.5);
-        layout->addChild(label[i]);
-    }
+//    Label* label[9];
+//    
+//    for (int i = 0;i < (int)OPTION_LABEL::MAX; i++) {
+//        label[i] = Label::create();
+//    }
+//    
+//    auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeOptionUI.txt");
+//    std::ifstream menuInFile(filePath);
+//    assert(menuInFile);
+//    
+//    std::string text;
+//    Vec2 _pos;
+//    for(int i = 0; i < MENU_UI_VALUE; i++)
+//    {
+//        menuInFile >> _pos.x >> _pos.y >> text;
+//        
+//        label[i]->setPosition(Vec2(_pos.x, -_pos.y));
+//        label[i]->setString(text);
+//        label[i]->setScale(3.5);
+//        layout->addChild(label[i]);
+//    }
 
     layout->addChild(closeButton);
     optionMenuList->addChild(layout);
