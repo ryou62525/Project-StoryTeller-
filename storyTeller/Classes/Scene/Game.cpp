@@ -64,7 +64,7 @@ bool Game::init()
     _player->setScale(0.3f);
     this->playAnimation("wait");
     this->getPlayer()->setFlippedX(true);
-    layer->addChild(_player, 50);
+    this->addChild(_player, 50);
     
     // 敵を追加
     addEnemy();
