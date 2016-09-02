@@ -3,6 +3,8 @@
 #include "Scene/Home.hpp"
 #include "Scene/MainApp.hpp"
 #include "Scene/Game.hpp"
+#include "Character.hpp"
+#include "Sample.hpp"
 
 USING_NS_CC;
 
@@ -45,10 +47,18 @@ bool AppDelegate::applicationDidFinishLaunching()
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
     
+
+    //glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
+
+    // run
+
     glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
     
+    FileUtils::getInstance()->addSearchPath("SpriteStudioFile");
+      
     // create a scene. it's an autorelease object
-    Scene* scene = MainApp::CreateScene();
+
+    Scene* scene = Game::CreateScene();
 
     director->runWithScene(scene);
     

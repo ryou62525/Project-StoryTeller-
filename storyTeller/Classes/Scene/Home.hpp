@@ -25,8 +25,22 @@ class Home : public cocos2d::Layer
 {
 private:
     
+<<<<<<< Updated upstream
     float percent = 50;
     int menuBgm;
+=======
+    //背景の作成
+    Sprite* background[4] =
+    {
+        Sprite::create("ImageFile/Menubg.png"),
+        Sprite::
+        
+        
+        create("ImageFile/kawabe.png"),
+        Sprite::create("ImageFile/Menu.png"),
+        Sprite::create("ImageFile/IconBg.png"),
+    };
+>>>>>>> Stashed changes
     
     Size winSize;
     ListView* optionMenuList;

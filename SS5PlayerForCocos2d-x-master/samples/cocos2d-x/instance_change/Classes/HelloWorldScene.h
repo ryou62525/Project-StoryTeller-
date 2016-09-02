@@ -11,6 +11,11 @@ public:
 
     virtual bool init();
     
+//    virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event) override;
+//    virtual void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event) override;
+//    virtual void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event) override;
+//    virtual void onTouchCancelled(cocos2d::Touch* touch, cocos2d::Event* event) override;
+    
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
@@ -28,11 +33,21 @@ public:
 	void playEndCallback(ss::Player* player);
 
 private:
+<<<<<<< Updated upstream:SS5PlayerForCocos2d-x-master/samples/cocos2d-x/instance_change/Classes/HelloWorldScene.h
 	//SS5プレイヤー
 	ss::Player *ssplayer;
 
 	//情報表示用ラベル
 	cocos2d::Label *label;
+=======
+    
+    ss::Player* enemy;
+	ss::Player* ssplayer;
+    cocos2d::Vec2 pos;
+    float speed;
+	int animation_count;
+    bool isRun;
+>>>>>>> Stashed changes:storyTeller/Classes/HelloWorldScene.h
 };
 
 #endif // __HELLOWORLD_SCENE_H__
