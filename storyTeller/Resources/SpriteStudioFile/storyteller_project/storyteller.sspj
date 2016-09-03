@@ -68,7 +68,9 @@
 			<item>BNDR</item>
 			<item>USER</item>
 		</availableAttributes>
-		<availableFeatures />
+		<availableFeatures>
+			<value>effect</value>
+		</availableFeatures>
 		<defaultSetAttributes>
 			<item>POSX</item>
 			<item>POSY</item>
@@ -80,7 +82,7 @@
 		<interpolationType>linear</interpolationType>
 		<renderingSettings>
 			<outputFolder>D:/optix_spritestudio/export</outputFolder>
-			<outputType>AVI</outputType>
+			<outputType>GIF</outputType>
 			<bgColor>FF606060</bgColor>
 			<addAnimeName>0</addAnimeName>
 			<addTimeStamp>0</addTimeStamp>
@@ -106,19 +108,22 @@
 		<padding>1</padding>
 	</texPackSettings>
 	<cellmapNames>
+		<value>effect001.ssce</value>
 		<value>st_girl.ssce</value>
 		<value>st_monster01.ssce</value>
-		<value>stage_sample2.ssce</value>
 	</cellmapNames>
 	<animepackNames>
-		<value>st_animetest.ssae</value>
-		<value>st_demo.ssae</value>
+		<value>effect001_mist.ssae</value>
+		<value>effect012_bubble.ssae</value>
+		<value>effect013_moonslash.ssae</value>
+		<value>effect018_blackonyx.ssae</value>
+		<value>st_anime_combo.ssae</value>
 		<value>st_girl.ssae</value>
 		<value>st_monster01.ssae</value>
 	</animepackNames>
-	<lastAnimeFile>st_monster01.ssae</lastAnimeFile>
-	<lastAnimeName>st_attack_specter01</lastAnimeName>
-	<lastCellMapFile>st_monster01.ssce</lastCellMapFile>
-	<lastCell>wing_r</lastCell>
-	<lastPart>wing_r</lastPart>
+	<lastAnimeFile>effect013_moonslash.ssae</lastAnimeFile>
+	<lastAnimeName>featherslash</lastAnimeName>
+	<lastCellMapFile>effect001.ssce</lastCellMapFile>
+	<lastCell>Mist1</lastCell>
+	<lastPart>root</lastPart>
 </SpriteStudioProject>
