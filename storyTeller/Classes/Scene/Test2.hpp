@@ -10,14 +10,13 @@
 #define Test2_hpp
 
 #include <cocos2d.h>
-
+#include "../SSPlayer/SS5Player.h"
 USING_NS_CC;
 
 class Test2 : public Layer
 {
 public:
     
-    static Scene* CreateScene();
     bool init();
     CREATE_FUNC(Test2);
     

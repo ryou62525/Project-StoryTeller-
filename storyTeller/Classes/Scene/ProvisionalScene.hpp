@@ -4,7 +4,7 @@
 //
 //  Created by vantan on 2016/08/31.
 //
-//
+//　仮当てのシーン
 
 #ifndef ProvisionalScene_hpp
 #define ProvisionalScene_hpp

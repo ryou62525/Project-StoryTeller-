@@ -246,7 +246,7 @@ void Home::CreateOptionWindow()
     layout->setPosition(optionMenuList->getContentSize()/2);
     auto imageView = ImageView::create("ImageFile/option/option_window.png");         //メニュー用の画像きたら貼り替え、スケールも変更
     imageView->setPosition(Vec2(winSize.width/2,-winSize.height/2));
-    imageView->setScale(1.5, 0.55);
+    imageView->setScale(1.5, 1.5);
     layout->addChild(imageView);
     Vec2 pos = imageView->getPosition();
     
