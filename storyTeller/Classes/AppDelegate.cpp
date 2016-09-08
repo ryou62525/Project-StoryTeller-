@@ -5,7 +5,7 @@
 #include "Scene/Game.hpp"
 #include "Character.hpp"
 #include "Sample.hpp"
-
+#include "GameManager.hpp"
 USING_NS_CC;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320),
@@ -58,7 +58,7 @@ bool AppDelegate::applicationDidFinishLaunching()
       
     // create a scene. it's an autorelease object
 
-    Scene* scene = MainApp::CreateScene();
+    Scene* scene = GameManager::CreateScene();
 
     director->runWithScene(scene);
     

@@ -8,6 +8,7 @@
 
 #include "Test2.hpp"
 USING_NS_CC;
+using namespace cocos2d::ui;
 
 bool Test2::init()
 {
@@ -40,6 +41,23 @@ bool Test2::init()
 //    {
 //        result->setString("接触してます");
 //    }
+    
+    auto layer = Layer::create();
+    auto button = cocos2d::ui::Button::create("ImageFile/quest/pose/pose.png");
+    button->setPosition(Vec2(size.width/1.1,size.height/6));
+    button->setScale(0.5);
+    
+    button->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type){
+        
+        if(type == Widget::TouchEventType::ENDED)
+        {
+            active = true;
+            CCLOG("%d",active);
+        }
+    });
+    
+    layer->addChild(button);
+    addChild(layer);
  
     auto resman = ss::ResourceManager::getInstance();
     resman->addData("SpriteStudioFile/storyteller_project/storyteller.ssbp");
@@ -51,6 +69,7 @@ bool Test2::init()
     addChild(player);
     
     //player->runAction(MoveTo::create(2,Vec2(0,0)));
+    
     
     return true;
 }

@@ -17,6 +17,8 @@ Scene* Title::CreateScene()
     Layer* layer = Title::create();
     scene->addChild(layer);
     return  scene;
+    
+    
 }
 
 bool Title::init()
