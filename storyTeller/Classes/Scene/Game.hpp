@@ -37,7 +37,29 @@ class Game : public cocos2d::Layer
     } gameState;
     
 public:
+
+    int countTimer;
+    int gameTime;
+    int gameTimeLimit;
     
+    int gameState;
+    enum GAMESTATE{
+    
+    WAIT,
+    START,
+    END
+    
+    };
+    
+<<<<<<< HEAD
+    static Scene* CreateScene();
+    bool init();
+    void setup();
+    void update(float deltaTime);
+    void gameControll();
+    void timeControll();
+    CREATE_FUNC(Game);
+=======
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     cocos2d::Vec2 visibleOrigin = cocos2d::Director::getInstance()->getVisibleOrigin();
     
@@ -93,6 +115,7 @@ private:
     
     // ゲームオーバー
     void onGameOver();
+>>>>>>> ryou62525/master
 };
 
 #endif /* Game_hpp */
