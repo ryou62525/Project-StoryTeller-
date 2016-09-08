@@ -58,6 +58,7 @@ void Result::setup(){
 void Result::update(float deltaTime)
 {
     
+<<<<<<< HEAD
     if(string_num<str.size()*3){
     
         string_num++;
@@ -185,5 +186,11 @@ std::string Result::substr(const std::string& s,const size_t pos, const size_t l
     auto sub = u32string.substr(pos,len);
     
     return conv.to_bytes(sub);
+=======
+    Label* label = Label::create();
+    label->setPosition(500, 500);
+    label->setString("test");
+    this->addChild(label);
+>>>>>>> ryou62525/master
 
 }

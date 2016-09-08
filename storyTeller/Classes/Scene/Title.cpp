@@ -17,36 +17,50 @@ Scene* Title::CreateScene()
     Layer* layer = Title::create();
     scene->addChild(layer);
     return  scene;
+    
+    
 }
 
 bool Title::init()
 {
     if(!Layer::init()){return  false;}
     
-    SetImageInfo();
- 
-    //イベントリスナーの生成
-    auto listener = EventListenerTouchOneByOne::create();
-    listener->setSwallowTouches(true);
-    
-    listener->onTouchBegan = [&](Touch* touch, Event* event)
     {
-        auto nextScene = Home::CreateScene();
-        Scene* transision;
+        SetImageInfo();
+        sprite = Sprite::create("ImageFile/TapEventImage.png");
+        sprite->setPosition(Vec2(960,200));
+        sprite->setScale(0.4,0.4);
+        this->addChild(sprite);
+        this->scheduleUpdate();
         
-        transision = TransitionFade::create(1.0f, nextScene);
-        Director::getInstance()->replaceScene(transision);
+        SetBgm();
+        SetBlink(2);
+    }
+    
+    //Scene* nextScene = Home::CreateScene();
+        
+    //画面タッチ時イベント処理
+    auto listener = EventListenerTouchOneByOne::create();
+    listener->onTouchBegan = [this](Touch* touch, Event* event)
+    {
+        this->getEventDispatcher()->removeAllEventListeners();
+        SetBlink(0.1);
+        changeScene = true;
+        se = AudioEngine::play2d("Sound/SE/TouchToStart.wav");
+        delay = DelayTime::create(3.5);
+        
+        auto startGame = CallFunc::create([]
+        {
+            TransitionFade* trasition = TransitionFade::create(1.5, Home::CreateScene());
+            Director::getInstance()->replaceScene(trasition);
+        });
+       
+        this->runAction(Sequence::create(delay, startGame, NULL));
         return true;
     };
     
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
-    
     return true;
-}
-
-void Title::update(float deltaTime)
-{
-    
 }
 
 //画像の情報をテキストファイルから呼び出す
@@ -86,9 +100,41 @@ void Title::SetImageInfo()
         
         CCLOG("%f", bgSprite[0]->getPosition().x);
         
+<<<<<<< HEAD
         
+=======
+        //変数に読み込んだデータをもとに情報をセットしていく
+        bgSprite[i] = Sprite::create(_filePath);
+        bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
+        bgSprite[i]->setScale(size.x, size.y);
+        this->addChild(bgSprite[i]);
+>>>>>>> ryou62525/master
+    }
+}
+
+void Title::SetBlink(float blinkSpeed)
+{
+    auto blink = Sequence::create(FadeTo::create(blinkSpeed, 60),FadeTo::create(blinkSpeed, 255), NULL);
+    sprite->runAction(RepeatForever::create(blink));
+}
+
+//BGMの設定
+void Title::SetBgm()
+{
+    titleBgm = AudioEngine::play2d("Sound/BGM/title_bgm.wav");
+    AudioEngine::setLoop(titleBgm, true);
+    
+}
+
+void Title::update(float deltaTime)
+{
+    if(changeScene)
+    {
+        volume -= 0.01;
+        AudioEngine::setVolume(titleBgm, volume);
     }
     
+<<<<<<< HEAD
     if(platform==Application::Platform::OS_IPAD){
         
         auto filePath_ipad = FileUtils::getInstance()->fullPathForFilename("DataFile/TitleImage_ipad.txt");
@@ -124,4 +170,16 @@ void Title::SetImageInfo()
 }
  
     
+=======
+    if(IsSoundless())
+    {
+        AudioEngine::stop(titleBgm);
+    }
+}
+
+bool Title::IsSoundless()
+{
+    if(volume <=0 )return true;
+    else return false;
+>>>>>>> ryou62525/master
 }
