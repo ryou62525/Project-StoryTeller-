@@ -20,6 +20,12 @@ Scene* Home::CreateScene()
 {
     Scene* scene = Scene::create();
     Layer* layer = Home::create();
+<<<<<<< HEAD
+    
+    
+    
+=======
+>>>>>>> ryou62525/master
     scene->addChild(layer);
     return  scene;
 }
@@ -27,6 +33,32 @@ Scene* Home::CreateScene()
 bool Home::init()
 {
     if(!Layer::init()){ return false; }
+<<<<<<< HEAD
+    
+    auto application = Application::getInstance();
+    auto platform = application->getTargetPlatform();
+
+    
+    menuSerect = MenuSerect::HOME;
+    sprite2 = Sprite::create("ImageFile/Menubg.png");
+    
+    if(platform== Application::Platform::OS_IPHONE){
+    
+    sprite2->setPosition(960, 550);
+        
+    }
+    
+    if(platform== Application::Platform::OS_IPAD){
+        
+        sprite2->setPosition(1030, 850);
+        
+        
+    }
+
+    
+    this->addChild(sprite2);
+=======
+>>>>>>> ryou62525/master
 
     user = UserDefault::getInstance();
     winSize = Director::getInstance()->getWinSize();
@@ -59,6 +91,71 @@ void Home::update(float deltaTime)
 //メニューのウィンドウの設定及びボタンの設置、タッチイベントの生成など
 void Home::CreateMenuWindow()
 {
+<<<<<<< HEAD
+    /////////////////////////////////////////////////////////////////////////
+    
+    auto application = Application::getInstance();
+    auto platform = application->getTargetPlatform();
+    
+    
+    if(platform== Application::Platform::OS_IPHONE){
+        
+    auto filePath_iphone = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeImagePath_iphone.txt");
+        
+        std::ifstream inFile_iphone(filePath_iphone);
+        assert(inFile_iphone);
+        
+        size_t imageValue;
+        std::string _imagePath;
+        Vec2 pos, size;
+        
+        inFile_iphone >> imageValue;
+        Sprite* bgSprite[imageValue];
+        for(int i = 0; i < imageValue; i++)
+        {
+            inFile_iphone >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
+            
+            bgSprite[i] = Sprite::create(_imagePath);
+            bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
+            bgSprite[i]->setScale(size.x, size.y);
+            this->addChild(bgSprite[i]);
+        }
+
+
+        
+    }
+    
+    if(platform==Application::Platform::OS_IPAD){
+        
+    auto filePath_ipad = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeImagePath_Ipad.txt");
+        
+        std::ifstream inFile_ipad(filePath_ipad);
+        assert(inFile_ipad);
+        
+        size_t imageValue;
+        std::string _imagePath;
+        Vec2 pos, size;
+        
+        inFile_ipad >> imageValue;
+        Sprite* bgSprite[imageValue];
+        for(int i = 0; i < imageValue; i++)
+        {
+            inFile_ipad >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
+            
+            bgSprite[i] = Sprite::create(_imagePath);
+            bgSprite[i]->setPosition(Vec2(pos.x, pos.y));
+            bgSprite[i]->setScale(size.x, size.y);
+            this->addChild(bgSprite[i]);
+        }
+        
+
+
+    }
+    
+
+    
+   }
+=======
     //背景設定---------------------------------------------------------------------------------------------------
     auto filePath = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeImage.txt");
     std::ifstream bgInFile(filePath);
@@ -181,13 +278,26 @@ void Home::CreateMenuWindow()
                                          }
                                      });
 }
+>>>>>>> ryou62525/master
 
 //オプションウィンドウの生成、及びタッチイベントの生成など
 void Home::CreateOptionWindow()
 {
+<<<<<<< HEAD
+    auto application = Application::getInstance();
+    auto platform = application->getTargetPlatform();
+    
+    if(platform== Application::Platform::OS_IPHONE){
+
+    
+    auto filePath_iphone = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeUIImage_iphone..txt");
+        std::ifstream inFile_iphone(filePath_iphone);
+    assert(inFile_iphone);
+=======
     optionMenuList->setContentSize(Size(winSize.width,winSize.height));
     optionMenuList->Node::setPosition((winSize - optionMenuList->getContentSize())/2);
     addChild(optionMenuList,1);
+>>>>>>> ryou62525/master
     
     Slider* slider[3];
     
@@ -201,12 +311,63 @@ void Home::CreateOptionWindow()
         slider[i]->Node::setScale(1);
     }
     
+<<<<<<< HEAD
+    inFile_iphone >> imageValue;
+=======
     slider[0]->setPosition(Vec2(1225, -350));
     slider[1]->setPosition(Vec2(1225, -500));
     slider[2]->setPosition(Vec2(1225, -650));
+>>>>>>> ryou62525/master
     
     slider[0]->addEventListener([this](Ref* pSender, Slider::EventType type)
     {
+<<<<<<< HEAD
+        inFile_iphone >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
+
+        button[i] = ui::Button::create(_imagePath);
+        button[i]->setPosition(Vec2(pos.x, pos.y));
+        button[i]->setScale(size.x, size.y);
+        this->addChild(button[i]);
+        button[i]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
+   
+    }
+  
+    button[1]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
+        
+    }
+    
+    if(platform== Application::Platform::OS_IPAD){
+        
+        
+        auto filePath_ipad = FileUtils::getInstance()->fullPathForFilename("DataFile/HomeUIImage_ipad.txt");
+        std::ifstream inFile_ipad(filePath_ipad);
+        assert(inFile_ipad);
+        
+        size_t imageValue;
+        std::string _imagePath;
+        Vec2 pos, size;
+        
+        inFile_ipad >> imageValue;
+        
+        ui::Button* button[imageValue];
+        for(int i = 0; i < imageValue; i++)
+        {
+            inFile_ipad >> _imagePath >> pos.x >> pos.y >> size.x >> size.y;
+            
+            button[i] = ui::Button::create(_imagePath);
+            button[i]->setPosition(Vec2(pos.x, pos.y));
+            button[i]->setScale(size.x, size.y);
+            this->addChild(button[i]);
+            button[i]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
+            
+        }
+        
+        button[1]->addTouchEventListener(CC_CALLBACK_2(Home::touchEvent, this));
+        
+    }
+
+    
+=======
         if(type == Slider::EventType::ON_PERCENTAGE_CHANGED)
         {
             //値が変化した時の処理
@@ -246,7 +407,7 @@ void Home::CreateOptionWindow()
     layout->setPosition(optionMenuList->getContentSize()/2);
     auto imageView = ImageView::create("ImageFile/option/option_window.png");         //メニュー用の画像きたら貼り替え、スケールも変更
     imageView->setPosition(Vec2(winSize.width/2,-winSize.height/2));
-    imageView->setScale(1.5, 0.55);
+    imageView->setScale(1.5, 1.5);
     layout->addChild(imageView);
     Vec2 pos = imageView->getPosition();
     
@@ -279,6 +440,7 @@ void Home::CreateOptionWindow()
     layout->addChild(closeButton);
     optionMenuList->addChild(layout);
     optionMenuList->setEnabled(false);
+>>>>>>> ryou62525/master
 }
 
 //ストーリー選択メニュー及びタッチイベントの生成
@@ -299,6 +461,7 @@ void Home::StorySelectedProcessingImplementation()
                                                 });
 }
 
+//ゲームシーンへ移動
 void Home::StageSelectedProcessingImplementation()
 {
     stage1SelectButton[0]->addTouchEventListener([this](Ref *pSender, Widget::TouchEventType type)

@@ -26,8 +26,6 @@ bool ProvisionalScene::init()
     sprite->setPosition(winSize/2);
     this->addChild(sprite,3);
     
-    Layer* optionLayer = Layer::create();
-    
     //メニューリスト生成----------------------------------------------------->
     menuList->setContentSize(Size(winSize.width,winSize.height));
     menuList->Node::setPosition((winSize - menuList->getContentSize())/2);

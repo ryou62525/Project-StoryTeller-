@@ -29,6 +29,15 @@
 			<posStable>0</posStable>
 		</cell>
 		<cell>
+			<name>shadow</name>
+			<pos>270 29</pos>
+			<size>196 47</size>
+			<pivot>0 -0.5</pivot>
+			<rotated>0</rotated>
+			<orgImageName></orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
 			<name>body</name>
 			<pos>254 100</pos>
 			<size>232 318</size>
@@ -104,7 +113,7 @@
 			<name>hund_r</name>
 			<pos>497 323</pos>
 			<size>239 176</size>
-			<pivot>0.282426774501801 0.153409093618393</pivot>
+			<pivot>0.253138065338135 0.176136359572411</pivot>
 			<rotated>0</rotated>
 			<orgImageName></orgImageName>
 			<posStable>0</posStable>

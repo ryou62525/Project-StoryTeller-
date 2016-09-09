@@ -1,0 +1,97 @@
+以下のプログラムはcocosVer3.x系を使用
+
+//-------------ぷにコンもどき作成----------------//
+
+//シングルタップにのみ対応
+
+//↓変数を宣言
+Vec2 DirPos;          //タッチした瞬間の位置
+Vec2 NowVec;          //現在のタッチした位置と動かした位置のベクトルを保存
+Vec2 PlayerPos;    	  //プレイヤーのPos
+
+//↓タッチした瞬間
+onTouchBegan(Touch* touch, Event* event )
+{
+     DirPos = touch->getLocation();
+
+     return true;
+}
+
+//↓タッチして動かしたら呼ばれる
+onTouchMoved(Touch* touch, Event* event)
+{
+     Vec2 NowPos = touch->getLocation();
+     Vec2(). subtract(DirPos, NowPos, &NowVec);
+     NowVec.normalize();
+}
+
+//↓1fごとに呼ばれる(移動量はここら辺で変える)
+void update(float dt)
+{
+     sprite->setPosition(PlayerPos);
+     Vec2().add(PlayerPos, NowVec, &PlayerPos);
+}
+
+
+//------------------2点間の距離を求める---------------------//
+
+//2Dゲームの場合
+//以下のものを使用すれば、AIのLOS追跡が可能
+
+Vec2 PlayerPos;		//プレイヤーのポジション
+Vec2 EnemyPos;		//エネミーのポジション
+Vec2 Length;		//プレイヤーとエネミーの差分
+
+//↓プレイヤーのベクトルとエネミーのベクトルの差分を取得する
+Vec2().subtract(PlayerPos, EnemyPos, &Length);
+//↓取得したベクトルをNormalizする
+Length.normalize;
+//↓Normalizした値を加算する
+Vec2().add(EnemyPos, Length, &EnemyPos);
+
+
+//------------------有限ステート-------------------------//
+
+//簡単なAIの場合にのみ有効なので、複雑なものには向いていないので注意する
+
+例：
+//状態
+enum State
+{
+     Move,
+     Attack,
+     Patrol
+}
+
+クラス AI
+{
+     //プレイヤーに向かって動く
+     void Move();
+
+     //プレイヤーに対して攻撃する
+     void Attack();
+
+     //プレイヤーがいなければ、ウロウロする
+     void Patrol();
+
+     //ここで状態を切り替える
+     void Update();
+}
+
+void AI::Update()
+{
+     switch(State)
+     {
+          case Move:
+               Move();
+               break;
+          case Attack:
+               Attack();
+               break;
+          case Patrol:
+               Patrol();
+               break;
+          default:
+               break;
+     }
+}

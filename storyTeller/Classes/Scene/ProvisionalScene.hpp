@@ -4,7 +4,7 @@
 //
 //  Created by vantan on 2016/08/31.
 //
-//
+//　仮当てのシーン
 
 #ifndef ProvisionalScene_hpp
 #define ProvisionalScene_hpp
@@ -29,6 +29,7 @@ public:
     bool init();
     void update(float deltaTime);
     CREATE_FUNC(ProvisionalScene);
+    
 };
 
 #endif /* ProvisionalScene_hpp */
