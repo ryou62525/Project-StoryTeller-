@@ -1,11 +1,5 @@
 #include "AppDelegate.h"
-#include "Scene/Title.hpp"
-#include "Scene/Home.hpp"
 #include "Scene/MainApp.hpp"
-#include "Scene/Game.hpp"
-#include "Character.hpp"
-#include "Sample.hpp"
-#include "GameManager.hpp"
 USING_NS_CC;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320),
@@ -14,7 +8,6 @@ static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320),
                      largeResolutionSize = cocos2d::Size(2048, 1536);
 
 AppDelegate::AppDelegate() {
-
 }
 
 AppDelegate::~AppDelegate() 
@@ -41,25 +34,13 @@ bool AppDelegate::applicationDidFinishLaunching()
         director->setOpenGLView(glview);
     }
 
-    // turn on display FPS
     director->setDisplayStats(true);
-
-    // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
-    
-
-    //glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
-
-    // run
-
     glview->setDesignResolutionSize(1920, 1080, ResolutionPolicy::SHOW_ALL);
     
     FileUtils::getInstance()->addSearchPath("SpriteStudioFile");
-      
-    // create a scene. it's an autorelease object
 
-    Scene* scene = GameManager::CreateScene();
-
+    Scene* scene = MainApp::CreateScene();
     director->runWithScene(scene);
     
     return true;
