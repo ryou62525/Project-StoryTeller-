@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "Scene/MainApp.hpp"
+#include "Scene/GameLayer.hpp"
 USING_NS_CC;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320),
